@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/gjlb.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_3066220_pnulrke6kkr.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_3068636_48wc5m7fpmb.css">
+    <script src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/gjlb.js"></script>
+    <link rel="icon" type="image/x-ico" href="../logoa.ico">
+    <title>现代影视</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 20px;
+            /*height: 4px;*/
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+            background: rgb(22, 22, 22);
+        }
+
+        ::-webkit-scrollbar-track {
+            /* -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); */
+            /* border-radius: 10px; */
+            background: rgb(41, 41, 41);
+
+        }
+
+        body {
+            background: rgb(46, 46, 46);
+            /* 3815 */
+            height: 4170px;
+        }
+
+        .header {
+            height: 120px;
+            width: 100%;
+            /* float: left; */
+            background-color: #1f1f1f;
+            /* position: fixed; */
+            /* border-bottom: 5px solid rgb(195, 39, 43); */
+            top: 0;
+            z-index: 9;
+            transition: 1s;
+            /* border-bottom: 5px solid rgb(160, 115, 76); */
+            /* box-shadow: 20px 40px 40px 20px #000000; */
+
+        }
+
+        .header ul li {
+            display: block;
+            font-size: 40px;
+            color: rgb(138, 137, 137);
+            line-height: 120px;
+            float: left;
+            list-style: none;
+            margin-left: 50px;
+            font-weight: bold;
+        }
+
+        .header ul li a {
+            color: rgb(138, 137, 137);
+            text-decoration: none;
+            font-size: 40px;
+        }
+
+        .header ul li:hover {
+            color: rgb(160, 115, 76)
+        }
+
+        .header ul li a:hover {
+            color: rgb(160, 115, 76)
+        }
+
+        .sy {
+            display: block;
+            font-size: 40px;
+            color: rgb(138, 137, 137);
+            line-height: 120px;
+            float: left;
+            list-style: none;
+            margin-left: 930px;
+            font-weight: bold;
+        }
+
+        .sy a {
+            text-decoration: none;
+            color: rgb(138, 137, 137);
+        }
+
+        .sy a:hover {
+            color: rgb(160, 115, 76)
+        }
+
+
+        .header-tab {
+            width: 4%;
+            height: 600px;
+            float: left;
+            background-color: rgb(0, 0, 0);
+            margin-top: 100px;
+            position: fixed;
+            z-index: 9;
+            border-radius: 0px 20px 20px 0px;
+        }
+
+        .header-tab ul {
+            margin-top: 0px;
+
+        }
+
+        .header-tab ul li {
+            list-style: none;
+            line-height: 50px;
+            font-size: 20px;
+            color: rgb(138, 137, 137);
+            /* text-align: center; */
+            width: 60px;
+            height: 80px;
+            line-height: 100px;
+            border-bottom: 1px solid rgb(59, 58, 58);
+            /* background-color: antiquewhite; */
+            /* margin-left: 15px; */
+            text-indent: 0.3em;
+            font-weight: bold;
+        }
+
+        .header-tab ul li:hover {
+            color: rgb(160, 115, 76);
+            cursor: pointer;
+        }
+
+        .header-tab ul li a {
+            text-decoration: none;
+            color: rgb(138, 137, 137);
+        }
+
+        .header-tab ul li a:hover {
+            color: rgb(160, 115, 76);
+        }
+
+        .header-tab ul li a i {
+            font-size: 56px;
+            color: rgb(138, 137, 137);
+            font-weight: 100;
+
+        }
+
+        .header-tab ul li a i:hover {
+            color: rgb(160, 115, 76);
+        }
+
+        .center {
+            width: 100%;
+            height: 800px;
+            float: left;
+            background: rgb(46, 46, 46);
+            overflow: hidden;
+        }
+
+        /* .center img {
+            width: 1344px;
+            height: 756px;
+            float: left;
+            margin-left: 100px;
+            margin-top: 30px;
+            border: 5px solid rgb(160, 115, 76);
+        } */
+
+        .centera {
+            width: 100%;
+            height: 230px;
+            float: left;
+            background-color: rgb(36, 35, 35);
+            margin-top: 30px;
+        }
+
+        .centera-a {
+            width: 400px;
+            height: 120px;
+            float: left;
+            /* background-color: aliceblue; */
+            margin-top: 20px;
+        }
+
+        .centera-a-a {
+            width: 40px;
+            height: 90px;
+            float: left;
+            font-weight: bold;
+            font-size: 26px;
+            color: rgb(160, 115, 76);
+            writing-mode: horizontal-tb;
+            line-height: 45px;
+            /* background-color: #000000; */
+            margin-top: 15px;
+            margin-left: 60px;
+        }
+
+        .centera-a-b {
+            width: 260px;
+            height: 45px;
+            float: left;
+            /* background-color: #b33c3c; */
+
+        }
+
+        .centera-a-b ul li {
+            float: left;
+            list-style: none;
+            line-height: 45px;
+            font-size: 20px;
+            color: rgb(138, 137, 137);
+            margin-left: 42px;
+        }
+
+        .centera-a-b ul li:hover {
+            color: rgb(160, 115, 76);
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .centera-b {
+            font-size: 28px;
+            color: rgb(160, 115, 76);
+            font-weight: bold;
+            float: left;
+            width: 120px;
+            /* background-color: #b33c3c; */
+            margin-top: 30px;
+            margin-left: 209px;
+            height: 37px;
+            line-height: 37px;
+        }
+
+        .centera-b-a {
+            font-size: 38px;
+            color: rgb(131, 131, 131);
+            font-weight: bold;
+            float: left;
+            width: 100px;
+            /* background-color: #b33c3c; */
+            margin-top: 30px;
+            margin-left: 10px;
+            height: 37px;
+            line-height: 37px;
+        }
+
+        .centerb {
+            width: 100%;
+            height: 720px;
+            float: left;
+            background-color: rgb(46, 46, 46);
+        }
+
+        .centerb-a {
+            width: 1723px;
+            height: 686px;
+            float: left;
+            /* background-color: black; */
+            margin-left: 100px;
+            margin-top: 65px;
+        }
+
+        .centerb-a-a {
+            width: 300px;
+            height: 686px;
+            float: left;
+            /* background-color: rgb(175, 102, 102); */
+            transition: 0.75s;
+        }
+
+
+        .centerb-a-a-hbx {
+            width: 300px;
+            height: 467px;
+            float: left;
+        }
+
+        .centerb-a-a:hover {
+            margin-top: -50px;
+            transition: 0.75s;
+
+        }
+
+        .centerb-a-a:hover .hbx-nr {
+            margin-top: 0px;
+            transition: 0.5s;
+        }
+
+        .hbx-nr {
+            width: 300px;
+            height: 220px;
+            float: left;
+            background-color: rgb(36, 35, 35);
+            margin-top: -115px;
+            transition: 0.75s;
+
+        }
+
+        .hbx-nr-bt {
+            width: 300px;
+            height: 30px;
+            float: left;
+            /* background-color: rgb(68, 69, 70); */
+            line-height: 30px;
+            font-size: 22px;
+            text-indent: 20px;
+            color: rgb(145, 145, 145);
+            text-align: left;
+            margin-top: 8px;
+        }
+
+        .hbx-nr-bt i {
+            line-height: 30px;
+            font-size: 20px;
+            color: rgb(209, 179, 6);
+        }
+
+        .hbx-nr-zy {
+            width: 300px;
+            height: 30px;
+            float: left;
+            /* background-color: aquamarine; */
+            line-height: 30px;
+            font-size: 18px;
+            text-indent: 20px;
+            color: rgb(97, 96, 95);
+            margin-top: 5px;
+        }
+
+        .hbx-nr-jj {
+            width: 260px;
+            height: 173px;
+            float: left;
+            /* background-color: aquamarine; */
+            line-height: 30px;
+            font-size: 18px;
+            margin-top: 5px;
+            color: rgb(133, 131, 130);
+            margin-left: 20px;
+            /* background-color: #ffffff; */
+        }
+
+
+
+        .centerb-a-b {
+            width: 733px;
+            height: 686px;
+            float: left;
+            /* background-color: rgb(175, 102, 102); */
+            transition: 0.75s;
+            margin-left: 30px;
+        }
+
+
+        .centerb-a-b-hbd {
+            width: 733px;
+            height: 520px;
+            float: left;
+            background-color: antiquewhite;
+        }
+
+        .centerb-a-b:hover {
+            margin-top: -50px;
+            transition: 0.75s;
+
+        }
+
+        .centerb-a-b:hover .hbd-nr {
+            margin-top: 0px;
+            transition: 0.5s;
+        }
+
+        .hbd-nr {
+            width: 733px;
+            height: 170px;
+            float: left;
+            background-color: rgb(36, 35, 35);
+            margin-top: -117.5px;
+            transition: 0.75s;
+        }
+
+        .hbd-nr-bt {
+            width: 733px;
+            height: 30px;
+            float: left;
+            color: rgb(133, 131, 130);
+            line-height: 30px;
+            font-size: 26px;
+            text-indent: 20px;
+            margin-top: 8px;
+        }
+
+        .hbd-nr-bt i {
+            line-height: 30px;
+            font-size: 24px;
+            color: rgb(209, 179, 7);
+        }
+
+        .hbd-nr-zy {
+            width: 733px;
+            height: 30px;
+            float: left;
+            /* background-color: aquamarine; */
+            line-height: 30px;
+            font-size: 20px;
+            text-indent: 20px;
+            color: #585858;
+            margin-top: 5px;
+        }
+
+        .hbd-nr-jj {
+            width: 693px;
+            height: 173px;
+            float: left;
+            /* background-color: aquamarine; */
+            line-height: 30px;
+            font-size: 20px;
+            margin-left: 20px;
+            color: rgb(133, 131, 130);
+            margin-top: 5px;
+        }
+
+        .centerc {
+            width: 100%;
+            height: 800px;
+            float: left;
+            background-color: #585858;
+        }
+
+        /* 悦影汇 */
+        .clubWrap {
+            height: 800px;
+            float: left;
+            width: 100%;
+            background: url(../imagess/zl2.jpg) no-repeat center 0;
+        }
+
+        .club {
+            width: 500px;
+            height: 800px;
+            margin-left: 1360px;
+            overflow: hidden;
+            position: relative;
+            margin-top: 40px;
+        }
+
+        .club .border {
+            width: 355px;
+            height: 600px;
+            border: 10px solid #d71518;
+            margin-top: 30px;
+        }
+
+        .club .wenzi {
+            width: 344px;
+            height: 590px;
+            background: rgba(46, 46, 46, 0.95);
+            position: absolute;
+            left: 37px;
+            top: 60px;
+            padding: 15px;
+            color: #fff;
+        }
+
+        .club .wenzi h2 {
+            font-size: 42px;
+            color: #b9b8b8;
+        }
+
+        .club .wenzi h3 {
+            font-size: 26px;
+            font-weight: normal;
+            margin: 10px 0 20px 0;
+            color: rgb(129, 125, 125);
+        }
+
+        .club .wenzi p {
+            font-size: 16px;
+            line-height: 34px;
+            text-indent: 2em;
+            color: #b9b8b8;
+        }
+
+        .centerd {
+            width: 100%;
+            height: 1110px;
+            float: left;
+            background-color: rgb(46, 46, 46);
+        }
+
+        .centerd-wz {
+            width: 100%;
+            height: 50px;
+            float: left;
+            margin-top: 70px;
+            /* background-color: black; */
+        }
+
+        .centerd-wz span {
+            font-size: 32px;
+            color: rgb(160, 115, 75);
+            font-weight: bold;
+            margin-left: 105px;
+        }
+
+        .centerd-wz span:nth-child(2) {
+            margin-left: 1245px;
+        }
+
+        .centerd-a {
+            width: 1350px;
+            height: 882px;
+            float: left;
+            background-color: rgb(206, 201, 201);
+            margin-left: 100px;
+            margin-top: 20px;
+        }
+
+        .center-c-zs {
+            height: 882px;
+            width: 1350px;
+            float: left;
+            background-color: rgb(46, 46, 46);
+            /* margin-top: 20px; */
+        }
+
+        .center-c-zs ul {
+            margin-top: -20px;
+            margin-left: -20px;
+        }
+
+        .center-c-zs ul li {
+            display: block;
+            float: left;
+            height: 431px;
+            width: 322px;
+            float: left;
+            background-color: rgb(226, 198, 198);
+            margin-left: 20px;
+            margin-top: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .center-c-zs ul li img {
+            height: 431px;
+            width: 322px;
+            transition: 1.5s;
+            position: absolute;
+        }
+
+        .center-c-zs ul li img:hover {
+            transform: scale(1.1);
+        }
+
+        /* .center-c-zs ul li:nth-child(8) .bt,
+        .center-c-zs ul li:nth-child(8) .bta {
+            color: black;
+        } */
+
+        .bt {
+            height: 120px;
+            width: 100%;
+            margin-top: 430px;
+            position: absolute;
+            background-color: rgb(31, 30, 30);
+            color: rgb(129, 126, 126);
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 50px;
+            text-align: center;
+            transition: 0.5s;
+        }
+
+        .bta {
+            font-size: 14px;
+            line-height: 14px;
+            color: rgb(54, 54, 54);
+        }
+
+        .btb {
+            font-size: 18px;
+        }
+
+        .center-c-zs ul li:hover .bt {
+            /* color: red; */
+
+            margin-top: 320px;
+        }
+
+        .centerd-b {
+            width: 350px;
+            height: 882px;
+            float: left;
+            background-color: rgb(29, 28, 28);
+            margin-left: 30px;
+            margin-top: 20px;
+        }
+
+        .centerd-b ul {
+            /* margin-left: 40px; */
+            font-size: 26px;
+            list-style: none;
+        }
+
+        .centerd-b ul li {
+            width: 300px;
+            font-size: 24px;
+            height: 80px;
+            /* font-weight: bold; */
+            color: #646464;
+            border-bottom: 2px dashed rgb(43, 42, 39);
+            line-height: 100px;
+            margin-left: 25px;
+        }
+
+        .centerd-b ul li:hover {
+            color: rgb(160, 115, 75);
+            cursor: pointer;
+        }
+
+
+
+        .centerd-b ul li i {
+            padding-right: 10px;
+            font-size: 26px;
+        }
+
+        .footer {
+            width: 100%;
+            height: 300px;
+            float: left;
+            background-color: rgb(25, 25, 26);
+            /* margin-top: 65px; */
+
+        }
+
+        .footera {
+            width: 1400px;
+            height: 60px;
+            float: left;
+            /* background-color: black; */
+            margin-left: 240px;
+            color: rgb(107, 106, 106);
+            line-height: 60px;
+            text-align: center;
+            font-size: 20px;
+
+        }
+
+        .footera:hover {
+            color: #8f6e03;
+        }
+
+        .footer-logo {
+            position: absolute;
+            height: 42px;
+            width: 34px;
+            margin-left: 120px;
+            margin-top: 4px;
+        }
+
+        .footer-logoa {
+            position: absolute;
+            height: 20px;
+            width: 18px;
+            margin-left: 1570px;
+            margin-top: 200px;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header ">
+        <ul id="a">
+            <li>
+                <a href="../html/culture.html">古典文化</a>
+            </li>
+            <li>
+                <a href="../html/news.html">新闻中心</a>
+            </li>
+            <li>
+                <a href="../html/Movies.html">现代影视</a>
+            </li>
+            <li><a href="../html/national.html">国潮当立</a></li>
+        </ul>
+        <div class="sy"><a href="../html/homepage.html">首页</a></div>
+    </div>
+    <div class="header-tab">
+        <ul>
+            <li style="color: rgb(160, 115, 76);">首页</li>
+
+            <li>电影</li>
+            <li> <a href="../html/shiping.html" target="_blank">剧集</a></li>
+            <li>综艺</li>
+            <li>动漫</li>
+            <li>更多</li>
+            <li style="border: none;margin-top: 0px;"><a href="#a"><i class="iconfont icon-fanhuidingbu"></i></a></li>
+        </ul>
+    </div>
+    <div class="center">
+        <div id="zSlider">
+            <div id="picshow">
+                <div id="picshow_img">
+                    <ul>
+                        <li><a href="#"><img src="../imagess/lwd.jpg"></a></li>
+                        <li><a href="#"><img src="../imagess/lsh.jpg"></a></li>
+                        <li><a href="#"><img src="../imagess/lxz.jpg"></a></li>
+                        <li><a href="#"><img src="../imagess/lhz.jpg"></a></li>
+                        <li><a href="#"><img src="../imagess/lcq.jpg"></a></li>
+                        <li><a href="#"><img src="../imagess/lrm.jpg"></a></li>
+                        <li><a href="#"><img src="../imagess/lbly.jpg"></a></li>
+                        <li><a href="#"><img src="../imagess/lzd.jpg"></a></li>
+                        <li><a href="#"><img src="../imagess/ljz.jpg"></a></li>
+                        <li><a href="#"><img src="../imagess/lzl2.jpg"></a></li>
+                        <li><a href="#"><img src="../imagess/lhh.jpg"></a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div id="select_btn">
+                <ul>
+                    <div class="hot"><i class="iconfont icon-daochu1024-07"></i>重磅推荐</div>
+                    <li><span class="select_text">厉害了,我的国<span class="yc">你我力量,实现中国梦想</span></span>
+                    </li>
+                    <li><span class="select_text">扫黑风暴<span class="yc">你给老子玩江湖,老子就是江湖</span></span>
+                    </li>
+                    <li><span class="select_text">雪中悍刀行<span class="yc">不问我何处何世,且思何方任谁</span></span>
+                    </li>
+                    <li><span class="select_text">斛珠夫人<span class="yc">半盘残棋,隐十年峥嵘</span></span>
+                    </li>
+                    <li><span class="select_text">陈情令<span class="yc">心里少装东西,这样快活自在</span></span>
+                    </li>
+                    <li><span class="select_text">人民的名义<span class="yc">对干部的感觉,就是无官不贪</span></span>
+                    </li>
+                    <li><span class="select_text">白鹿原<span class="yc">有死亡就有新生的生命</span></span>
+                    </li>
+                    <li><span class="select_text">让子弹飞<span class="yc">站着,把钱给挣了</span></span>
+                    </li>
+                    <li><span class="select_text">惊蛰<span class="yc">毅然赴死,你准备好了?</span></span>
+                    </li>
+                    <li><span class="select_text">战狼2<span class="yc">犯我中华者虽远必诛</span></span>
+                    </li>
+                    <li><span class="select_text">红海行动<span class="yc">别怕,我们带你回家</span></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="centera">
+        <div class="centera-a" style="margin-left: 150px;border-right: 1px solid rgb(0, 0, 0);">
+            <div class="centera-a-a">电影</div>
+            <div class="centera-a-b" style="margin-top: 15px;">
+                <ul>
+                    <li>喜剧</li>
+                    <li>爱情</li>
+                    <li>动作</li>
+                </ul>
+            </div>
+            <div class="centera-a-b">
+                <ul>
+                    <li>恐怖</li>
+                    <li>科幻</li>
+                    <li>剧情</li>
+                </ul>
+            </div>
+        </div>
+        <div class="centera-a" style="border-right: 1px solid rgb(0, 0, 0);">
+            <div class="centera-a-a">剧集</div>
+            <div class="centera-a-b" style="margin-top: 15px;">
+                <ul>
+                    <li>警匪</li>
+                    <li>悬疑</li>
+                    <li>都市</li>
+                </ul>
+            </div>
+            <div class="centera-a-b">
+                <ul>
+                    <li>偶像</li>
+                    <li>古装</li>
+                    <li>军事</li>
+                </ul>
+            </div>
+        </div>
+        <div class="centera-a" style="border-right: 1px solid rgb(0, 0, 0);">
+            <div class="centera-a-a">综艺</div>
+            <div class="centera-a-b" style="margin-top: 15px;">
+                <ul>
+                    <li>选秀</li>
+                    <li>搞笑</li>
+                    <li>访谈</li>
+                </ul>
+            </div>
+            <div class="centera-a-b">
+                <ul>
+                    <li>体育</li>
+                    <li>纪实</li>
+                    <li>科教</li>
+                </ul>
+            </div>
+        </div>
+        <div class="centera-a">
+            <div class="centera-a-a">动漫</div>
+            <div class="centera-a-b" style="margin-top: 15px;">
+                <ul>
+                    <li>热血</li>
+                    <li>恋爱</li>
+                    <li>校园</li>
+                </ul>
+            </div>
+            <div class="centera-a-b">
+                <ul>
+                    <li>幻想</li>
+                    <li>成人</li>
+                    <li>悬疑</li>
+                </ul>
+            </div>
+        </div>
+        <div class="centera-b">热映电影
+
+        </div>
+        <div class="centera-b-a">HOT</div>
+    </div>
+    <div class="centerb">
+        <!-- 大框 -->
+        <div class="centerb-a">
+            <!-- 小海报框 -->
+            <div class="centerb-a-a">
+                <!-- 小海报框 -->
+                <div class="centerb-a-a-hbx">
+                    <img src="../imagess/hbzl2.jpg" alt="">
+                </div>
+                <div class="hbx-nr">
+                    <div class="hbx-nr-bt">战狼2:
+                        <i class="iconfont icon-star-full"></i>
+                        <i class="iconfont icon-star-full"></i>
+                        <i class="iconfont icon-star-full"></i>
+                        <i class="iconfont icon-star-full"></i>
+                        <i class="iconfont icon-star-half"></i>
+                    </div>
+                    <div class="hbx-nr-zy">主演:吴京 吴刚 张翰</div>
+                    <div class="hbx-nr-jj">简介:脱下军装的冷锋被卷入了一场非洲国家的叛乱，本来能够安全撤离的他无法忘记军人的职责，重回战场展开救援的故事。</div>
+                </div>
+            </div>
+            <!-- 小海报框 -->
+            <div class="centerb-a-a" style="margin-left: 30px;">
+                <!-- 小海报框 -->
+                <div class="centerb-a-a-hbx">
+                    <img src="../imagess/ssydj2.jpg" alt="">
+                </div>
+                <div class="hbx-nr">
+                    <div class="hbx-nr-bt">三少爷的剑:
+                        <i class="iconfont icon-star-full"></i>
+                        <i class="iconfont icon-star-full"></i>
+                        <i class="iconfont icon-star-full"></i>
+                        <i class="iconfont icon-star-half"></i>
+                        <i class="iconfont icon-star"></i>
+                    </div>
+                    <div class="hbx-nr-zy">主演:林更新 何润东 江一燕 蒋梦婕</div>
+                    <div class="hbx-nr-jj">简介:该剧根据古龙同名小说改编,讲述了神剑山庄的三少爷谢晓峰与燕十三为家族存亡、师门荣辱展开的一场生死较量的故事。</div>
+                </div>
+            </div>
+            <!-- 大海报框 -->
+            <div class="centerb-a-b">
+                <!-- 大海报框 -->
+                <div class="centerb-a-b-hbd">
+                    <img src="../imagess/bbbbb.jpg" alt="">
+                </div>
+                <div class="hbd-nr">
+                    <div class="hbd-nr-bt">我和我的祖国:
+                        <i class="iconfont icon-star-full"></i>
+                        <i class="iconfont icon-star-full"></i>
+                        <i class="iconfont icon-star-full"></i>
+                        <i class="iconfont icon-star-full"></i>
+                        <i class="iconfont icon-star-full"></i>
+                    </div>
+                    <div class="hbd-nr-zy">主演:黄渤 吴京 葛优 刘昊然 陈飞宇 张译 杜江 宋佳</div>
+                    <div class="hbd-nr-jj">简介:该片通过几个片段讲述了新中国成立70年间普通百姓与共和国息息相关的故事,于2019年9月30日在中国大陆上映。</div>
+                </div>
+            </div>
+            <!-- 小海报框 -->
+            <div class="centerb-a-a" style="margin-left: 30px;">
+                <!-- 小海报框 -->
+                <div class="centerb-a-a-hbx">
+                    <img src="../imagess/cjh.jpg" alt="">
+                </div>
+                <div class="hbx-nr">
+                    <div class="hbx-nr-bt">长津湖:
+                        <i class="iconfont icon-star-full"></i>
+                        <i class="iconfont icon-star-full"></i>
+                        <i class="iconfont icon-star-full"></i>
+                        <i class="iconfont icon-star-full"></i>
+                        <i class="iconfont icon-star-full"></i>
+                    </div>
+                    <div class="hbx-nr-zy">主演:吴京 易烊千玺 段奕宏 欧豪</div>
+                    <div class="hbx-nr-jj">简介:该片以抗美援朝战争第二次战役中的长津湖战役为背景，讲述了一段中国人民志愿军扭转战场态势的历史。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="centerc">
+        <!-- 悦影汇 -->
+        <div class="clubWrap">
+            <div class="club">
+                <div class="border"></div>
+
+                <div class="wenzi">
+                    <h2>战狼Ⅱ</h2>
+                    <h3>吴京</h3>
+                    <P> 《战狼Ⅱ》是吴京执导的动作军事电影，由吴京、弗兰克·格里罗、吴刚、张翰、卢靖姗、淳于珊珊、丁海峰等主演。该片于2017年7月27日在中国内地上映。2020年3月20日，《战狼Ⅱ》重映 。
+                        该片讲述了脱下军装的冷锋被卷入了一场非洲国家的叛乱，本来能够安全撤离的他无法忘记军人的职责，重回战场展开救援的故事。
+                        该片以56.8亿元雄踞国产电影历史最高票房纪录。并在中国内地创下累计观影人次1.4亿的成绩，荣登“单一市场观影人次”全球榜首。
+                    </P>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="centerd">
+        <div class="centerd-wz">
+            <span>影视剧集</span>
+            <span>好剧推荐</span>
+        </div>
+        <div class="centerd-a">
+            <div class="center-c-zs">
+                <ul>
+                    <li><img src="../imagess/1.jpg" alt="">
+                        <div class="bt">庆余年
+                            <div class="bta">主演:张若昀</div>
+                            <div class="btb">我不想继续活着当笑话</div>
+                        </div>
+                    </li>
+                    <li><img src="../imagess/2.jpg" alt="">
+                        <div class="bt">雪中悍刀行
+                            <div class="bta">张若昀</div>
+                            <div class="btb">天上剑仙三百万，遇我也需尽低眉</div>
+                        </div>
+                    </li>
+                    <li><img src="../imagess/3.jpg" alt="">
+                        <div class="bt">扫黑风暴
+                            <div class="bta">孙红雷</div>
+                            <div class="btb">你给老子玩江湖，老子就是江湖</div>
+                        </div>
+                    </li>
+                    <li><img src="../imagess/4.jpg" alt="">
+                        <div class="bt">将夜
+                            <div class="bta">陈飞宇</div>
+                            <div class="btb">我喜欢你，你喜欢我，这就很好</div>
+                        </div>
+                    </li>
+                    <li><img src="../imagess/5.jpg" alt="">
+                        <div class="bt">人民的名义
+                            <div class="bta">于和伟</div>
+                            <div class="btb">你听说过吗,胜利者不受指责</div>
+                        </div>
+                    </li>
+                    <li><img src="../imagess/6.jpg" alt="">
+                        <div class="bt">大秦赋
+                            <div class="bta">张鲁一</div>
+                            <div class="btb">世间事,当真如此滑稽</div>
+                        </div>
+                    </li>
+                    <li><img src="../imagess/7.jpg" alt="">
+                        <div class="bt">三国演义
+                            <div class="bta">陆毅 于和伟</div>
+                            <div class="btb">事当决而不决者,愚人也</div>
+                        </div>
+                    </li>
+                    <li><img src="../imagess/8.jpg" alt="">
+                        <div class="bt">斛珠夫人
+                            <div class="bta">杨幂 陈伟霆</div>
+                            <div class="btb">没有后路可以走了</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="centerd-b">
+            <ul>
+                <li><i style="color: #bb0b0e;font-weight: bold;">1</i> 三国演义</li>
+                <li><i style="color: #047228;font-weight: bold;">2</i> 水浒传</li>
+                <li><i style="color: #746803;font-weight: bold;">3</i> 倚天屠龙记</li>
+                <li><i>4</i> 天龙八部</li>
+                <li><i>5</i> 庆余年</li>
+                <li><i>6</i> 楚乔传</li>
+                <li><i>7</i> 瞄准</li>
+                <li><i>8</i> 黑白禁区</li>
+                <li><i>9</i> 将夜</li>
+                <li><i>10</i> 新世界</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footera" style="margin-top: 25px;">新华社主办 版权所有：新华网股份有限公司 Copyright © 2000- 2021 XINHUANET.com All
+            Rights Reserved</div>
+        <div class="footera">本站所刊登的新华社及新华网各种新闻﹑信息和各种专题专栏资料，均为新华网版权所有，未经协议授权禁止下载使用</div>
+        <div class="footera">新华社简介 | 公司官网 | 联系我们 | 我要链接 | 版权声明 | 法律顾问 | 广告服务 | 技术服务中心 | 新华云 | 违法和不良信息举报电话:19914864524
+        </div>
+        <div class="footera">
+            <div class="footer-logo"><img src="../images/foot-ga.png" alt=""></div>
+            京公网安备：11000002000015号 | 网上传播视听节目许可证(0103020) | 中国互联网视听节目服务自律公约 | 可信网站认证
+        </div>
+        <div class="footer-logoa"><img src="../images/foo-gb.png" alt=""></div>
+    </div>
+</body>
+
+</html>

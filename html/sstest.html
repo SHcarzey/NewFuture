@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/x-ico" href="../logoa.ico">
+    <style>
+        /* 总体 */
+        .ct-jq {
+            width: 420px;
+            height: 385px;
+            padding: 0;
+            margin: 0 auto;
+            list-style: none;
+            display: flex;
+            position: relative;
+            border: 1px solid rgb(53, 52, 53);
+            background-color: rgb(216, 209, 197);
+
+        }
+
+        /* 隐藏input，主要利用“:checked”选择器，达到切换目的 */
+        .ct-jq-input {
+            display: none;
+
+        }
+
+        /* 给选项卡统一背景色 */
+        .ct-jq-item {
+            flex: 1;
+            height: 40px;
+            text-align: center;
+            background-color: rgb(216, 209, 197);
+        }
+
+        /* 选项卡label撑高 */
+        .ct-jq-tit {
+            display: block;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            cursor: pointer;
+            font-size: 20px;
+            background-color: rgb(216, 209, 197);
+
+        }
+
+        /* 
+         * hover高亮，选中高亮。
+         * “+”代表下一个，div+p：选择所有紧接着<div>元素之后的<p>元素。
+         * “:checked”代表选择每个选中的输入元素
+		 */
+        /* .ct-jq-tit:hover, */
+        .ct-jq-input:checked+.ct-jq-tit {
+            border-bottom: 4px solid brown;
+            color: brown;
+            /* height: 40px; */
+            font-weight: bold;
+            background-color: rgb(216, 209, 197);
+        }
+
+        /* 内容区域默认全隐藏，相对于ul定位*/
+        .ct-jq-content {
+            display: none;
+            position: absolute;
+            /* top: 60px; */
+            left: 0;
+            text-align: left;
+            /* text-indent: 2em; */
+            /* padding: 10px; */
+            box-sizing: border-box;
+        }
+
+        /* 
+         * 选中项内容区域显示
+         * ~：表示某元素之后的每一个某元素。p~ul：选择p元素之后的每一个ul元素
+         */
+        .ct-jq-input:checked~.ct-jq-content {
+            display: block;
+        }
+
+        .ctjr {
+            width: 420px;
+            height: 340px;
+            position: absolute;
+            background-color: rgb(230, 224, 210);
+            float: left;
+
+        }
+
+        .ctjr ul {
+            float: left;
+            margin-top: 127px;
+        }
+
+        .ctjr ul:nth-child(1) {
+            margin-left: 10px;
+        }
+
+        .ctjr ul li {
+            list-style: none;
+            height: 35px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .ctjra {
+            width: 420px;
+            height: 340px;
+            position: absolute;
+            background-color: rgb(230, 224, 210);
+            float: left;
+
+        }
+
+        .ctjra ul {
+            float: left;
+            margin-top: 127px;
+            margin-left: 17px;
+        }
+
+        .ctjra ul li {
+            list-style: none;
+            height: 35px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .ctjr ul li:hover,
+        .ctjra ul li:hover {
+            color: brown;
+            text-decoration: underline;
+        }
+
+        /* .ctjr img {
+            position: absolute;
+        } */
+    </style>
+</head>
+
+<body>
+
+
+    <ul class="ct-jq">
+        <li class="ct-jq-item">
+            <!-- 默认第一项选中，有checked -->
+            <input type="radio" name="check" id="active1" class="ct-jq-input">
+            <!-- for属性绑定input -->
+            <label for="active1" class="ct-jq-tit">传统节日</label>
+            <div class="ct-jq-content">
+                <div class="ctjr"
+                    style="background-image: url(../imagea/hP_jieri_bg.png);background-repeat: no-repeat;">
+                    <ul>
+                        <li>春节</li>
+                        <li>端午节</li>
+                        <li>重阳节</li>
+                        <li>元旦</li>
+                        <li>植树节</li>
+                    </ul>
+                    <ul>
+                        <li>元宵节</li>
+                        <li>七夕节</li>
+                        <li>国庆节</li>
+                        <li>妇女节</li>
+                        <li>建党节</li>
+                    </ul>
+                    <ul>
+                        <li>春节</li>
+                        <li>端午节</li>
+                        <li>重阳节</li>
+                        <li>元旦</li>
+                        <li>植树节</li>
+                    </ul>
+                    <ul>
+                        <li>元宵节</li>
+                        <li>七夕节</li>
+                        <li>国庆节</li>
+                        <li>妇女节</li>
+                        <li>建党节</li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+        <li class="ct-jq-item">
+            <input type="radio" name="check" id="active2" class="ct-jq-input" checked>
+            <label for="active2" class="ct-jq-tit">二十四气节</label>
+            <div class="ct-jq-content">
+                <div class="ctjra"
+                    style="background-image: url(../imagea/hP_jieqi_bg.png);background-repeat: no-repeat;">
+                    <ul>
+                        <li>立春</li>
+                        <li>清明</li>
+                        <li>芒种</li>
+                        <li>立秋</li>
+                        <li>寒露</li>
+                        <li>大雪</li>
+                    </ul>
+                    <ul>
+                        <li>立春</li>
+                        <li>清明</li>
+                        <li>芒种</li>
+                        <li>立秋</li>
+                        <li>寒露</li>
+                        <li>大雪</li>
+                    </ul>
+                    <ul>
+                        <li>立春</li>
+                        <li>清明</li>
+                        <li>芒种</li>
+                        <li>立秋</li>
+                        <li>寒露</li>
+                        <li>大雪</li>
+                    </ul>
+                    <ul>
+                        <li>立春</li>
+                        <li>清明</li>
+                        <li>芒种</li>
+                        <li>立秋</li>
+                        <li>寒露</li>
+                        <li>大雪</li>
+                    </ul>
+                </div>
+            </div>
+
+        </li>
+
+    </ul>
+
+
+
+</body>
+
+</html>

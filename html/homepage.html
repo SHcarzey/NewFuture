@@ -1,0 +1,925 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-12-20 17:20:37
+ * @LastEditTime: 2022-04-24 07:21:29
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \常用\国风\html\homepage.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>国潮当立</title>
+    <script src="../js/bulid/vue/vue.js"></script>
+    <script src="../js/bulid/vue/element.js"></script>
+    <link rel="stylesheet" href="../css/element.css">
+    <link rel="icon" type="image/x-ico" href="../logoa.ico">
+    <style>
+        @font-face {
+            font-family: 'myfont';
+            src: url('../css/fonts/江西拙楷2.0.ttf');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: myfont;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(254, 247, 233);
+        }
+
+        a:hover {
+            color: rgb(135, 13, 1);
+        }
+
+        body {
+            width: 1920px;
+            overflow-x: hidden;
+
+        }
+
+        ::-webkit-scrollbar {
+            width: 20px;
+            /*height: 4px;*/
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+            background: rgba(195, 39, 43, 1.0);
+        }
+
+        ::-webkit-scrollbar-track {
+            /* -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); */
+            /* border-radius: 10px; */
+            background: rgba(0, 0, 0, 1);
+
+        }
+
+        .header-top {
+            width: 1900px;
+            height: 100px;
+            float: left;
+        }
+
+        .header {
+            height: 100px;
+            width: 1900px;
+            /* float: left; */
+            background-color: rgb(0, 0, 0);
+            position: fixed;
+            border-bottom: 5px solid rgb(135, 13, 1);
+            border-right: 5px solid rgb(195, 39, 43);
+            top: 0;
+            z-index: 9;
+            transition: 0.75s;
+        }
+
+        .nava {
+            margin-left: -30px;
+            transition: 0.75s;
+        }
+
+        .nava li {
+            display: block;
+            font-size: 30px;
+            color: rgb(254, 247, 233);
+            line-height: 100px;
+            float: left;
+            list-style: none;
+            margin-left: 50px;
+        }
+
+        .nava li:hover {
+            color: rgb(135, 13, 1);
+            cursor: pointer;
+        }
+
+
+
+        .header-logo {
+            float: left;
+            width: 320px;
+            height: 70px;
+            /* background-color: aliceblue; */
+            margin-left: 145px;
+            margin-top: 10px;
+            transition: 0.75s;
+        }
+
+        .header-logo img {
+            float: left;
+            /* margin-top: 15px; */
+            height: 80px;
+            /* margin: 30 auto; */
+        }
+
+
+        .navb {
+            margin-right: 25px;
+            transition: 0.75s;
+        }
+
+        .navb li {
+            display: block;
+            font-size: 30px;
+            color: rgb(254, 247, 233);
+            line-height: 100px;
+            float: right;
+            list-style: none;
+            margin-left: 50px;
+        }
+
+        .navb li:hover {
+            color: rgb(135, 13, 1);
+            cursor: pointer;
+        }
+
+        .sticky {
+            height: 120px;
+            width: 1900px;
+            /* float: left; */
+            background-color: rgba(0, 0, 0, 0.6);
+            position: fixed;
+            border-bottom: 5px solid rgb(135, 13, 1);
+            top: 0;
+            z-index: 9;
+            transition: 0.75s;
+
+        }
+
+
+        .sticky .nava {
+            margin-left: -30px;
+            margin-top: 10px;
+        }
+
+        .sticky .nava li {
+            display: block;
+            font-size: 30px;
+            color: rgb(254, 247, 233);
+            line-height: 100px;
+            float: left;
+            list-style: none;
+            margin-left: 50px;
+        }
+
+        .sticky .nava li:hover {
+            color: rgb(135, 13, 1);
+            cursor: pointer;
+        }
+
+
+
+        .sticky .header-logo {
+            float: left;
+            width: 320px;
+            height: 70px;
+            /* background-color: aliceblue; */
+            margin-left: 145px;
+            margin-top: 15px;
+        }
+
+        .sticky .header-logo img {
+            float: left;
+            /* margin-top: 15px; */
+            height: 80px;
+            /* margin: 30 auto; */
+        }
+
+        .sticky .navb {
+            margin-right: 25px;
+            margin-top: 10px;
+        }
+
+        .sticky .navb li {
+            display: block;
+            font-size: 30px;
+            color: rgb(254, 247, 233);
+            line-height: 100px;
+            float: right;
+            list-style: none;
+            margin-left: 50px;
+        }
+
+        .sticky .navb li:hover {
+            color: rgb(135, 13, 1);
+            cursor: pointer;
+        }
+
+        .headera {
+            width: 1920px;
+            height: 800px;
+            float: left;
+            background-color: black;
+        }
+
+        /* 轮播图 */
+        .lb {
+            width: 1920px;
+            height: 800px;
+            background-color: #99a9bf;
+            /* margin-top: 140px; */
+
+            z-index: 2;
+            position: absolute;
+
+        }
+
+        .lb-wz {
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0.2);
+            color: rgb(254, 247, 233);
+            font-size: 40px;
+            line-height: 100px;
+            text-align: center;
+        }
+
+        .lb-nr {
+            height: 580px;
+            width: 400px;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: rgb(254, 247, 233);
+            font-size: 22px;
+            line-height: 28px;
+            text-align: left;
+            margin-left: 200px;
+            margin-top: 20px;
+            text-indent: 2em;
+        }
+
+
+
+        /* .el-icon-arrow-left::before {
+            height: 100px;
+            width: 100px;
+        } */
+
+        /* 按钮 */
+        .el-carousel__arrow {
+            width: 100px;
+            height: 600px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 0px;
+        }
+
+        .el-carousel__arrow:nth-child(2) {
+            width: 100px;
+            margin-right: 15px;
+        }
+
+        .el-carousel__arrow:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        /* 按钮中的标 */
+        .el-icon-arrow-left {
+            font-size: 50px;
+        }
+
+        .el-icon-arrow-right {
+            font-size: 50px;
+        }
+
+        /* 滑块 */
+        .el-carousel__button {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+        .el-carousel__item:nth-child(3) {
+            background-color: #99a9bf;
+            background-image: url(../image/lba.jpg);
+        }
+
+        .el-carousel__item:nth-child(4) {
+            background-color: #99a9bf;
+            background-image: url(../image/lbb.jpg);
+        }
+
+        .el-carousel__item:nth-child(5) {
+            background-color: #99a9bf;
+            background-image: url(../image/lbc.jpg);
+        }
+
+        .el-carousel__item:nth-child(6) {
+            background-color: #99a9bf;
+            background-image: url(../image/lbd.jpg);
+        }
+
+        .center {
+            height: 3100px;
+            width: 100%;
+            float: left;
+            background-color: rgb(63, 63, 63);
+        }
+
+        .centera {
+            width: 100%;
+            height: 650px;
+            float: left;
+            background-color: black;
+        }
+
+        /* 鼠标悬停 */
+        .xt {
+            height: 650px;
+            background-color: rgb(53, 52, 52);
+        }
+
+        .container {
+            position: relative;
+            height: 650px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            /* padding: 30px; */
+        }
+
+        .container .card {
+            margin-top: 100px;
+            position: relative;
+            max-width: 300px;
+            height: 215px;
+            background: rgb(254, 247, 233);
+            margin: 30px 10px;
+            padding: 20px 15px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 5px 202px rgba(0, 0, 0, 0.5);
+            transition: .3s ease-in-out;
+            margin-left: 100px;
+        }
+
+        .card:nth-child(1) {
+            margin-left: -30px;
+        }
+
+        .container .card:hover {
+            height: 420px;
+        }
+
+        .container .card .imgBx {
+            position: relative;
+            width: 260px;
+            height: 260px;
+            top: -60px;
+            left: 20px;
+            z-index: 1;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .container .card .imgBx img {
+            max-width: 100%;
+            border-radius: 4px;
+        }
+
+        .content h2 {
+            display: block;
+            margin-top: -20px;
+        }
+
+        .content p {
+            font-size: 20px;
+            display: block;
+            margin-top: 10px;
+            text-align: left;
+            text-indent: 2em;
+        }
+
+        .container .card .content {
+            position: relative;
+            margin-top: -140px;
+            padding: 10px 15px;
+            text-align: center;
+            color: rgb(56, 55, 55);
+            visibility: hidden;
+            opacity: 0;
+            transition: .3s ease-in-out;
+        }
+
+        .container .card:hover .content {
+            visibility: visible;
+            /* 元素可见 */
+            opacity: 1;
+            /* 不透明 */
+            margin-top: -40px;
+            /* 上边距移动-40px */
+            transition-delay: .3s;
+            /* 移动时间为0.3秒 */
+        }
+
+        /*  */
+
+        .centerb {
+            width: 100%;
+            height: 730px;
+            float: left;
+            display: flex;
+            justify-content: center;
+            /* background-color: antiquergb(254, 247, 233); */
+        }
+
+        .center-wz {
+            width: 350px;
+            height: 60px;
+            position: absolute;
+            /* background-color: black; */
+            margin-top: 30px;
+            font-size: 32px;
+            font-weight: bold;
+            color: rgb(254, 247, 233);
+            text-align: center;
+            line-height: 60px;
+            /* border: 5px solid rgb(254, 247, 233); */
+
+        }
+
+        .centerb div:nth-child(1) {
+            margin-left: -900px;
+        }
+
+        .centerb div:nth-child(2) {
+            margin-left: 900px;
+        }
+
+        .centerb div:nth-child(3) {
+            margin-left: 0px;
+        }
+
+        .centerb-a {
+            width: 900px;
+            height: 506.25px;
+            background-color: aliceblue;
+            margin-top: 120px;
+            margin-left: 30px;
+        }
+
+        .centerc {
+            width: 100%;
+            height: 930px;
+            float: left;
+            background-color: rgb(53, 52, 52);
+        }
+
+        .qp {
+            width: 1800px;
+            height: 900px;
+            /* background-color: rgb(0, 0, 0); */
+            /* background-image: url(./a.jpg); */
+            margin-left: 65px;
+            margin-top: 65px;
+        }
+
+        .a {
+            position: relative;
+            width: 1800px;
+            height: 800px;
+            display: flex;
+            justify-content: space-evenly;
+            /* background-color: black; */
+        }
+
+        /* 大图 */
+        .b {
+            width: 1800px;
+            height: 800px;
+            transition: .4s;
+            background-size: cover;
+            background-color: rgb(206, 140, 54);
+
+        }
+
+        /* 小图的框 */
+        .c {
+            width: 270px;
+            height: 800px;
+            display: flex;
+            /* 纵向布局 */
+            flex-direction: column;
+            justify-content: space-between;
+            /* background-color: aqua; */
+
+            /* 距离大图的距离 */
+
+        }
+
+        /* 每张小图 */
+        .d {
+            position: relative;
+            width: 270px;
+            height: 100px;
+            right: 0;
+            transition: .5s;
+            overflow: hidden;
+
+
+        }
+
+        .d img {
+            position: absolute;
+            width: 250px;
+            /* 小图片上移 */
+            transform: translate(0, -50px);
+            transition: .5s;
+            right: 0;
+        }
+
+        .d.dd {
+            opacity: 0;
+            right: 250px;
+        }
+
+        .d:hover img {
+            opacity: 0;
+            right: 250px;
+        }
+
+        .centerd {
+            width: 100%;
+            height: 800px;
+            float: left;
+            background-color: rgb(63, 63, 63);
+        }
+
+        /* 手风琴 */
+        .sfq {
+            width: 1920px;
+            height: 600px;
+            background-color: rgb(0, 0, 0);
+            margin-top: 100px;
+        }
+
+        .box {
+            width: 1920px;
+            height: 600px;
+            margin: 0 auto;
+            overflow: hidden;
+            transition: all 0.75s;
+            background-color: rgb(53, 52, 52);
+        }
+
+        .box li {
+            float: left;
+            position: relative;
+            width: 200px;
+            height: 600px;
+            transition: all 0.75s;
+            list-style: none;
+        }
+
+        /* box为手风琴盒子 box li为手风琴盒子内图片 */
+        .box li .text {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            font-size: 32px;
+            color: #fff;
+            width: 100%;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .box:hover li {
+            width: 160px;
+        }
+
+        /* 鼠标悬停至盒子时调整图片宽度 */
+        .box li:hover {
+            width: 1400px;
+        }
+
+        /* 鼠标悬停至盒内图片时调整盒内其他图片宽度 */
+        .footer {
+            border-top: 5px solid rgb(135, 13, 1);
+            width: 100%;
+            height: 300px;
+            float: left;
+            background-color: black;
+        }
+
+
+        .footera {
+            width: 1400px;
+            height: 60px;
+            float: left;
+            /* background-color: black; */
+            margin-left: 270px;
+            color: rgb(254, 247, 233);
+            line-height: 60px;
+            text-align: center;
+            font-size: 20px;
+
+        }
+
+        .footera:hover {
+            color: rgb(135, 13, 1);
+            cursor: pointer;
+        }
+
+        .footer-logo {
+            position: absolute;
+            height: 42px;
+            width: 34px;
+            margin-left: 125px;
+            margin-top: 4px;
+        }
+
+        .footer-logoa {
+            position: absolute;
+            height: 20px;
+            width: 18px;
+            margin-left: 1530px;
+            margin-top: 220px;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-top"></div>
+    <div class="header">
+        <ul class="nava">
+            <li>
+                <a href="../html/culture.html">古典文化</a>
+            </li>
+            <li>
+                <a href="../html/news.html">新闻中心</a>
+            </li>
+            <li>
+                <a href="../html/Movies.html">现代影视</a>
+            </li>
+            <li><a href="../html/national.html">国潮当立</a></li>
+        </ul>
+        <div class="header-logo"><img src="../image/logoa.png" alt=""></div>
+        <ul class="navb">
+            <li><a href="http://localhost:8080/register">注册</a></li>
+            <li><a href="http://localhost:8080/login">登录</a></li>
+        </ul>
+    </div>
+    <div class="headera">
+        <div class="lb">
+
+            <div id="app">
+                <template>
+                    <el-carousel :interval="3000" arrow="always" height="800px">
+                        <el-carousel-item v-for="item in items" :key="item">
+                            <!-- <div class="lb-wz">{{item.name}}</div> -->
+                            <!-- <div class="lb-nr">{{item.nr}}</div> -->
+                            <!-- <h3>{{ item }}</h3> -->
+                        </el-carousel-item>
+                    </el-carousel>
+
+                </template>
+            </div>
+
+        </div>
+    </div>
+    <div class="center">
+        <div class="centera">
+            <div class="xt">
+                <div class="container">
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="../image/xtc.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h2>国粹京剧</h2>
+                            <p>
+                                京剧，又称平剧、京戏等，是中国影响最大的戏曲剧种，分布地以北京为中心，遍及全国各地。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="../image/xtb.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h2>文言文</h2>
+                            <p>
+                                文言文是中国古代的一种汉语书面语言组成的文章，“五四运动”以前汉民族所使用的语言。主要包括以先秦时期的口语为基础而形成的书面语言。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="../image/xta.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h2>古城</h2>
+                            <p>
+                                古城，一般是指拥有着百年以上历史、至现代仍保存完好或经修缮基本恢复原貌的大规模古代建筑的城市聚落。古城是一地历史文化的外在表现，是人类共有的文化遗产。
+                            </p>
+                        </div>
+                    </div>
+                    <!-- <div class="card">
+                        <div class="imgBx">
+                            <img src="../images/4.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h2>Card Three</h2>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Sapiente recusandae, voluptatibus magnam reprehenderit a numquam.
+                                Temporibus esse sit provident quaerat quae.
+                            </p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="centerb">
+            <div class="center-wz">70S70周年阅兵</div>
+            <div class="center-wz">《全民战“疫”》-致敬英雄</div>
+            <div class="centerb-a">
+                <video id="via" onmouseover="videoPlaybacka()" onmouseout="videoStoppeda()" src="../mp4/yb.mp4"
+                    width="900px" height="506.25px">
+                </video>
+            </div>
+            <div class="centerb-a">
+                <video id="vib" onmouseover="videoPlaybackb()" onmouseout="videoStoppedb()" src="../mp4/ky.mp4"
+                    width="900px" height="506.25px">
+                </video>
+            </div>
+        </div>
+        <div class="centerc">
+            <!-- 切片图 -->
+            <div class="qp">
+                <div class="a">
+                    <div class="b"></div>
+                    <div class="c">
+                        <div class="d dd"><img src="1.jpg" alt=""></div>
+                        <div class="d"><img src="2.jpg" alt=""></div>
+                        <div class="d"><img src="3.jpg" alt=""></div>
+                        <div class="d"><img src="4.jpg" alt=""></div>
+                        <div class="d"><img src="5.jpg" alt=""></div>
+                        <div class="d"><img src="6.jpg" alt=""></div>
+                        <div class="d"><img src="7.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 切片图 -->
+        </div>
+        <div class="centerd">
+            <div class="sfq">
+                <div class="box">
+                    <ul>
+                        <li>
+                            <img src="../image/sfq4c.jpg" alt="">
+                            <div class="text">文创</div>
+                        </li>
+                        <li>
+                            <img src="../image/sfq3.jpg" alt="">
+                            <div class="text">服饰</div>
+                        </li>
+                        <li>
+                            <img src="../image/sfq4b.jpg" alt="">
+                            <div class="text">产品</div>
+                        </li>
+                        <li>
+                            <img src="../image/sfq2.jpg" alt="">
+                            <div class="text">影视</div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footera" style="margin-top: 32px;">新华社主办 版权所有：新华网股份有限公司 Copyright © 2000- 2021 XINHUANET.com All
+            Rights Reserved</div>
+        <div class="footera">本站所刊登的新华社及新华网各种新闻﹑信息和各种专题专栏资料，均为新华网版权所有，未经协议授权禁止下载使用</div>
+        <div class="footera">新华社简介 | 公司官网 | 联系我们 | 我要链接 | 版权声明 | 法律顾问 | 广告服务 | 技术服务中心 | 新华云 | 违法和不良信息举报电话:19914864524
+        </div>
+        <div class="footera">
+            <div class="footer-logo"><img src="../images/foot-ga.png" alt=""></div>
+            京公网安备：11000002000015号 | 网上传播视听节目许可证(0103020) | 中国互联网视听节目服务自律公约 | 可信网站认证
+        </div>
+        <div class="footer-logoa"><img src="../images/foo-gb.png" alt=""></div>
+    </div>
+</body>
+<script src="../js/jquery-3.1.0.js"></script>
+<script type="text/javascript">
+    window.addEventListener("scroll", function () {
+        // var header = document.querySelector("header");
+        var header = document.querySelector(".header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    })
+    // app挂载
+    new Vue({
+        el: '#app',
+        data: {
+            items: [
+                {
+                    name: '国粹京剧',
+                    nr: '京剧，又称平剧、京戏等，是中国影响最大的戏曲剧种，分布地以北京为中心，遍及全国各地。'
+                },
+                { name: '婚庆·京服', nr: '劳斯莱斯（Rolls-Royce），英国豪华汽车品牌，1906年成立于英国，公司创始人为Frederick Henry Royce（亨利·莱斯）和Charles Stewart Rolls（查理·劳斯）。Rolls-Royce出产的轿车是顶级汽车的杰出代表，以其豪华而享誉全球，是欧美汽车的主要代表之一。除了制造汽车，劳斯莱斯还涉足航空发动机制造的领域，也是一家优秀的发动机制造商，空客飞机部分型号用的就是劳斯莱斯的发动机。2003年，劳斯莱斯汽车公司被宝马（BMW）接手。2018年12月，世界品牌实验室发布《2018世界品牌500强》榜单，劳斯莱斯排名第488。' },
+                { name: '古城', nr: '法拉利所使用的传奇标志有着非同寻常的起源。该标志起初是作为个人徽章，由备受重勋的意大利一战飞行员空军烈士弗朗西斯科·巴拉卡（Francesco Baracca）使用，他把徽章绘在了所驾驶飞机的机身上。除了熟悉的跃马之外，法拉利的盾牌还包含其它元素。黄色底色取自于摩德纳的金丝雀，以纪念恩佐·法拉利的故乡，而上方的绿、白、红三种颜色则代表意大利国旗。' },
+                { name: '文言文', nr: '凯迪拉克（Cadillac），美国通用汽车旗下世界著名豪华汽车品牌，1902年（壬寅年）诞生于被誉为美国汽车之城的底特律，一百多年来，凯迪拉克汽车在行业车内创造了无数个第一，缔造了无数个豪华车的行业标准。可以说凯迪拉克的历史代表了美国豪华车的历史。在韦伯斯特大词典中，凯迪拉克被定义为“同类中最为出色、最具声望事物”的同义词；被一向以追求极致尊贵著称的伦敦皇家汽车俱乐部冠以“世界标准”的美誉。 凯迪拉克融汇了百年历史精华和一代代设计师的智慧才智，成为汽车工业的领导性品牌。' },
+            ]
+        }
+    })
+    function videoPlaybacka() {
+        //获取视频标签
+        var via = document.getElementById('via');
+        //给视频标签添加缓存播放---video标签属性。
+        via.setAttribute("autoplay", "autoplay")
+        //给视频标签添加循环播放---video标签属性。
+        via.setAttribute("loop", "loop")
+        via.setAttribute("controls", "controls")
+        //给视频加入控件
+        // video.setAttribute("controls", "controls")
+        //播放视频
+        via.play();
+    }
+    function videoStoppeda() {
+        //获取视频标签
+        var via = document.getElementById('via');
+        via.removeAttribute("controls", "controls")
+        //停止播放
+        via.pause();
+    }
+    function videoPlaybackb() {
+        //获取视频标签
+        var vib = document.getElementById('vib');
+        //给视频标签添加缓存播放---video标签属性。
+        vib.setAttribute("autoplay", "autoplay")
+        //给视频标签添加循环播放---video标签属性。
+        vib.setAttribute("loop", "loop")
+        vib.setAttribute("controls", "controls")
+        //给视频加入控件
+        // video.setAttribute("controls", "controls")
+        //播放视频
+        vib.play();
+    }
+    function videoStoppedb() {
+        //获取视频标签
+        var vib = document.getElementById('vib');
+        vib.removeAttribute("controls", "controls")
+        //停止播放
+        vib.pause();
+    }
+
+
+    // 切片图
+    // 获取左边大图的元素
+    let b = document.querySelector(".b")
+    // 获取右边小图的所有元素
+    let d = document.getElementsByClassName("d")
+    let time
+    let index = 0
+    // 设置一个重置函数
+    let a = function () {
+        for (let i = 0; i < d.length; i++) {
+            d[i].className = "d"
+        }
+    }
+    // 设置一个选中函数
+    let aa = function () {
+        // 先代入重置函数
+        a()
+        d[index].className = "d dd"
+    }
+    // 设置启动轮播图的时间函数
+    function ts() {
+        time = setInterval(function () {
+            aa()
+            index++
+            b.style.backgroundImage = "url('" + [index] + ".jpg')"
+            if (index == 7) {
+                index = 0
+            }
+        }, 1500);
+    }
+    for (let i = 0; i < d.length; i++) {
+        // 鼠标移动到当前小图片上时触发
+        d[i].onmousemove = function () {
+            // 鼠标移动到当前小图片时右边大图片变成当前的小图片
+            b.style.backgroundImage = "url('" + [i + 1] + ".jpg')"
+            // 鼠标移动到小图片上面时关闭定时器并重置定时，
+            // 鼠标移开后再继续执行
+            a()
+            clearInterval(time)
+            index = i + 1
+            ts()
+        }
+    }
+    // 执行切片图
+    ts()
+</script>
+
+</html>

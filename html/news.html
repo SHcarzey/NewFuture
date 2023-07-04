@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻中心</title>
+    <link rel="stylesheet" href="../css/lb.css">
+    <script src="../js/lb.js"></script>
+    <link rel="icon" type="image/x-ico" href="../logoa.ico">
+    <script>
+        window.onload = function () {
+            // 轮播选项
+            const options = {
+                id: 'lb-1',              // 轮播盒ID
+                speed: 600,              // 轮播速度(ms)
+                delay: 3000,             // 轮播延迟(ms)
+                direction: 'left',       // 图片滑动方向
+                moniterKeyEvent: true,   // 是否监听键盘事件
+                moniterTouchEvent: true  // 是否监听屏幕滑动事件
+            }
+            const lb = new Lb(options);
+            lb.start();
+        }
+    </script>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 20px;
+            /*height: 4px;*/
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+            background: rgb(170, 18, 4);
+        }
+
+        ::-webkit-scrollbar-track {
+            /* -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); */
+            /* border-radius: 10px; */
+            background: rgb(233, 233, 233);
+
+        }
+
+        body {
+            height: 2340px;
+            overflow: hidden;
+            overflow-y: auto;
+        }
+
+        .aa {
+            height: 2160px;
+            background: url(../images/gq.jpg) top left no-repeat, url(../images/gqa.jpg) bottom left no-repeat;
+        }
+
+        /* body {
+            height: 2160px;
+            background: url(../images/gq.jpg) top left no-repeat, url(../images/gqa.jpg) bottom left no-repeat;
+            /* background-color: #e2d19a; 
+        } */
+
+        .header {
+            height: 120px;
+            width: 1903px;
+            /* float: left; */
+            background-color: #083b90;
+            /* position: fixed; */
+            /* border-bottom: 5px solid rgb(195, 39, 43); */
+            top: 0;
+            z-index: 9;
+            transition: 1s;
+            background-image: url(../images/gq.jpg);
+
+        }
+
+        .header ul li {
+            display: block;
+            font-size: 40px;
+            color: #083b90;
+            line-height: 120px;
+            float: left;
+            list-style: none;
+            margin-left: 50px;
+            font-weight: bold;
+
+        }
+
+
+        .header ul li:hover {
+            color: coral
+        }
+
+        .header ul li a {
+            text-decoration: none;
+            color: #083b90;
+        }
+
+        .header ul li a:hover {
+            color: coral;
+        }
+
+        .sy {
+            display: block;
+            font-size: 40px;
+            color: rgb(255, 255, 255);
+            line-height: 120px;
+            float: left;
+            list-style: none;
+            margin-left: 930px;
+            font-weight: bold;
+        }
+
+        .sy a {
+            text-decoration: none;
+            color: #083b90;
+        }
+
+        .sy a:hover {
+            color: coral;
+        }
+
+        .header-tab {
+            width: 100%;
+            height: 50px;
+            float: left;
+            background-color: #083b90;
+            display: flex;
+            justify-content: center;
+        }
+
+        .header-tab ul li {
+            display: block;
+            list-style: none;
+            float: left;
+            line-height: 50px;
+            font-size: 18px;
+            color: white;
+            text-align: center;
+            width: 90px;
+        }
+
+        .header-tab ul li:hover {
+            color: coral;
+            cursor: pointer;
+        }
+
+        .header-tab ul li img {
+            float: left;
+            position: absolute;
+            margin-top: 15px;
+            margin-left: -27px;
+        }
+
+        .header-bainian {
+            width: 1200px;
+            height: 57px;
+            float: left;
+            /* margin-top: 10px; */
+            color: #3253a7;
+            line-height: 57px;
+            font-size: 28px;
+            font-weight: bold;
+            margin-left: 355px;
+        }
+
+        .header-bainian:hover {
+            color: coral;
+        }
+
+        .header-zsj {
+            width: 1200px;
+            height: 26px;
+            line-height: 26px;
+            margin-left: 355px;
+        }
+
+        .header-zsj a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #666;
+        }
+
+        .header-zsj a:hover {
+            color: coral;
+        }
+
+        .header-zsj a:nth-child(1) {
+            margin-left: 65px;
+        }
+
+        .center {
+            width: 1200px;
+            height: 1800px;
+            float: left;
+            margin-left: 351.5px;
+            /* background-color: #ffffff; */
+            /* background-image: url(../images/gq.jpg); */
+            margin-top: 40px;
+            border-bottom: 5px solid #0d74dc;
+        }
+
+        .centera {
+            width: 875px;
+            height: 814px;
+            float: left;
+            /* padding: 10; */
+            background-color: #3493ee;
+        }
+
+        .centera-a {
+            width: 855px;
+            height: 481px;
+            float: left;
+            background-color: #3493ee;
+            /* margin: 10px; */
+            margin-left: 10px;
+
+        }
+
+        /* 轮播 */
+        .lb-box {
+            width: 855px;
+            height: 481px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        @media (max-width:568px) {
+            .lb-box {
+                width: 76%;
+                height: 220px;
+            }
+        }
+
+        .lb-content {
+            width: 100%;
+            height: 100%;
+        }
+
+        .lb-item {
+            width: 100%;
+            height: 100%;
+            display: none;
+            position: relative;
+        }
+
+        .lb-item>a {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .lb-item>a>img {
+            width: 100%;
+            height: 100%;
+            transition: 1s;
+        }
+
+        .lb-item>a>img:hover {
+            transform: scale(1.1);
+            transition: 1s;
+        }
+
+        /* 图下面的字 */
+        .lb-item>a>span {
+            width: 100%;
+            display: block;
+            position: absolute;
+            bottom: 0px;
+            padding: 15px;
+            color: #fff;
+            /* background-color: rgba(0, 0, 0, 0.7); */
+            font-weight: bold;
+            font-size: 22px;
+        }
+
+        .lb-item>a>span:hover {
+            color: coral;
+        }
+
+        @media (max-width:568px) {
+            .lb-item>a>span {
+                padding: 10px;
+            }
+        }
+
+        .lb-item.active {
+            display: block;
+            left: 0%;
+        }
+
+        .lb-item.active.left {
+            left: -100%;
+        }
+
+        .lb-item.active.right {
+            left: 100%;
+        }
+
+        /*  */
+        .lb-item.next,
+        .lb-item.prev {
+            display: block;
+            position: absolute;
+            top: 0px;
+        }
+
+        .lb-item.next {
+            left: 100%;
+        }
+
+        .lb-item.prev {
+            left: -100%;
+        }
+
+        .lb-item.next.left,
+        .lb-item.prev.right {
+            left: 0%;
+        }
+
+        .lb-sign {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            padding: 5px 3px;
+            border-radius: 6px;
+            list-style: none;
+            user-select: none;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        /* 小轮播按钮的字 */
+        .lb-sign li {
+            width: 20px;
+            height: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 20px;
+            text-align: center;
+            float: left;
+            color: #aaa;
+            margin: auto 4px;
+            border-radius: 5px;
+            cursor: pointer;
+            /* background-color: rgb(255, 255, 255); */
+            transition: 0.5s;
+        }
+
+        .lb-sign li:hover {
+            color: #fff;
+        }
+
+        .lb-sign li.active {
+            color: rgb(3, 3, 3);
+            background-color: rgb(255, 255, 255);
+            width: 40px;
+            transition: 0.5s;
+        }
+
+        .lb-ctrl {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 50px;
+            font-weight: 900;
+            user-select: none;
+            background-color: rgba(168, 168, 168, 0.7);
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.1s linear;
+
+        }
+
+        @media (max-width:568px) {
+            .lb-ctrl {
+                font-size: 30px;
+            }
+        }
+
+        .lb-ctrl.left {
+            left: -50px;
+
+        }
+
+        .lb-ctrl.right {
+            right: -50px;
+        }
+
+        .lb-box:hover .lb-ctrl.left {
+            left: 10px;
+        }
+
+        .lb-box:hover .lb-ctrl.right {
+            right: 10px;
+        }
+
+        .lb-ctrl:hover {
+            background-color: rgb(0, 0, 0);
+        }
+
+        /* 轮播 */
+        .centera-b {
+            width: 310px;
+            height: 300px;
+            float: left;
+            /* background-color: white; */
+            margin-left: 10px;
+            margin-top: 18px;
+
+        }
+
+        .centera-b img {
+            float: left;
+
+        }
+
+        .centera-b-tp {
+            width: 310px;
+            height: 173px;
+            overflow: hidden;
+            float: left;
+            background-image: url(../images/cc.jpg);
+
+        }
+
+        .centera-b-tp img {
+            transition: 1s;
+        }
+
+        .centera-b-tp img:hover {
+            transform: scale(1.1);
+            transition: 1s;
+        }
+
+        .centera-b-a {
+            width: 310px;
+            height: 60px;
+            float: left;
+            background-image: url(../images/nolive-bg.jpg);
+
+
+        }
+
+        .centera-b-a-wz {
+            width: 288px;
+            float: left;
+            margin-left: 10px;
+            height: 41px;
+            /* line-height: 20.5; */
+            color: white;
+            /* background-color: black; */
+            margin-top: 8px;
+        }
+
+        .centera-b-a-wz:hover {
+            color: coral;
+        }
+
+        .centera-b-b {
+            width: 310px;
+            height: 61px;
+            float: left;
+            background-image: url(../images/globallink.png);
+            margin-top: 10px;
+        }
+
+        .centera-c {
+            width: 264px;
+            height: 304px;
+            float: left;
+            /* background-color: white; */
+            margin-left: 10px;
+            margin-top: 18px;
+        }
+
+        .centera-c img {
+            width: 264px;
+            height: 146px;
+        }
+
+        .centera-ca {
+            width: 264px;
+            height: 146px;
+            float: left;
+            overflow: hidden;
+        }
+
+        .centera-ca-wz {
+            width: 264px;
+            height: 40px;
+            position: absolute;
+            /* background-color: white; */
+            margin-top: -45px;
+            color: white;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .centera-ca-wz:hover {
+            color: coral;
+        }
+
+        .centera-cb {
+            width: 264px;
+            height: 146px;
+            float: left;
+            overflow: hidden;
+            margin-top: 12px;
+        }
+
+        .centera-d {
+            width: 260px;
+            height: 304px;
+            float: left;
+            background-color: white;
+            margin-left: 10px;
+            overflow: hidden;
+            margin-top: 18px;
+        }
+
+        .centera-d img {
+            width: 260px;
+            height: 304px;
+            transition: 1s;
+        }
+
+        .centera-d img:hover {
+            transform: scale(1.1);
+            transition: 1s;
+        }
+
+        .centerb {
+            width: 325px;
+            height: 814px;
+            float: left;
+        }
+
+        .centerb img {
+            float: left;
+        }
+
+        .centerb-b {
+            width: 325px;
+            height: 600px;
+            float: left;
+            background-color: #666;
+            overflow: hidden;
+            /* overflow-y: auto; */
+            box-shadow: 0px 0px 20px #888888;
+            transition: 0.5s;
+        }
+
+        .centerb-b:hover {
+            transition: 0.5s;
+            overflow-y: auto;
+        }
+
+        .centerb-gif {
+            width: 320px;
+            height: 0px;
+            float: left;
+            position: absolute;
+            margin-top: 575px;
+            overflow: hidden;
+            margin-left: 3px;
+            transition: 0.2s;
+            background-image: url(../images/headline-tips.gif);
+            box-shadow: 0px -5px 10px #9b9a9a;
+        }
+
+        .centerb-b:hover .centerb-gif {
+            height: 25px;
+            transition: 0.2s;
+        }
+
+        .centerb-bS {
+            width: 325px;
+            height: 1225px;
+            float: left;
+            background-color: white;
+            box-shadow: 10px 10px 5px #888888;
+        }
+
+        .centerb-bS ul li {
+            width: 322px;
+            height: 59px;
+            border-left: 3px solid #060883;
+            border-bottom: 0.5px solid rgb(201, 201, 201);
+            list-style: none;
+            font-size: 16px;
+            line-height: 59px;
+            text-indent: 0.5em;
+            transition: 0.25s;
+        }
+
+        .centerb-bS ul li:hover {
+            background-color: #3493ee;
+            border-left: 5px solid #ffffff;
+            width: 320px;
+            color: white;
+            text-decoration: underline;
+            transition: 0.25s;
+        }
+
+        .centerb-b::-webkit-scrollbar {
+            width: 4px;
+            /*height: 4px;*/
+        }
+
+        .centerb-b::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+            background: #3493ee;
+        }
+
+        .centerb-b::-webkit-scrollbar-track {
+            /* -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); */
+            /* border-radius: 10px; */
+            background: rgb(207, 207, 207);
+        }
+
+        .centerb-c {
+            width: 322px;
+            height: 118px;
+            float: left;
+            background-color: #ffffff;
+            border-left: 3px solid #060883;
+            border-bottom: 1px solid #ccc;
+            box-shadow: 10px 10px 20px #888888;
+            overflow: hidden;
+        }
+
+        /* 文字竖排 */
+        .sz {
+            width: 35px;
+            height: 118px;
+            float: left;
+            writing-mode: vertical-rl;
+            /* background-color: #060883; */
+            line-height: 35px;
+            font-size: 18px;
+            text-align: center;
+            margin-left: 10px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            color: #3493ee;
+        }
+
+        .notice {
+            width: 250px;
+            height: 105px;
+            float: left;
+            /* background-color: #e02a2a; */
+            overflow: hidden;
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+
+
+
+        .notice ul li {
+            height: 35px;
+            line-height: 35px;
+            /* font-weight: bold; */
+        }
+
+        .notice ul li:hover {
+            color: coral;
+            text-decoration: underline;
+        }
+
+        .sbft {
+            width: 1200px;
+            height: 90px;
+            float: left;
+            margin-top: 10px;
+            overflow: hidden;
+
+        }
+
+        .centerc {
+            width: 268px;
+            height: 748px;
+            float: left;
+            /* background-color: #e78442; */
+            margin-top: 15px;
+        }
+
+        .centerc-a {
+            height: 35px;
+            width: 100%;
+            float: left;
+            font-size: 18px;
+            line-height: 35px;
+            color: #0d74dc;
+        }
+
+        .centerc-a img {
+            float: left;
+            padding-right: 10px;
+        }
+
+        .centerc-b {
+            width: 100%;
+            height: 440px;
+            float: left;
+            /* background-color: rgb(255, 255, 255); */
+        }
+
+        .centerc-b ul li {
+            list-style: none;
+            height: 40px;
+            border-bottom: 1px dashed #0d74dc;
+            line-height: 40px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .centerc-b ul li:hover {
+            color: #e78442;
+            cursor: pointer;
+        }
+
+        .centerc-b ul i {
+            font-size: 18px;
+            font-weight: bold;
+            color: #444444;
+            padding-right: 15px;
+            padding-left: 8px;
+        }
+
+        .centerc-c {
+            height: 272px;
+            width: 100%;
+            float: left;
+            border-top: 1px solid #0d74dc;
+            /* background-color: #ccc; */
+        }
+
+        .centerc-c-a {
+            width: 100%;
+            height: 30px;
+            float: left;
+            /* background-color: #e78442; */
+        }
+
+        .centerc-c-a-an {
+            width: 50px;
+            height: 30px;
+            float: left;
+            background-color: #0d74dc;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            color: white;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .centerc-c-a-wz {
+            width: 100px;
+            height: 30px;
+            float: left;
+            text-align: center;
+            line-height: 30px;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .centerc-c-b {
+            width: 268px;
+            height: 146px;
+            float: left;
+            background-color: rgb(163, 71, 71);
+            margin-top: 15px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .centerc-c-b img {
+            transition: 1s;
+            float: left;
+        }
+
+        .centerc-c-b img:hover {
+            transform: scale(1.1);
+            transition: 1s;
+        }
+
+        .centerc-c-bimgwz {
+            height: 40px;
+            width: 250px;
+            background-color: rgba(0, 0, 0, 0.2);
+            position: absolute;
+            margin-left: 9px;
+            font-size: 14px;
+            color: rgb(255, 255, 255);
+            margin-top: 90px;
+        }
+
+        .centerc-c-bimgwz:hover {
+            color: #e78442;
+            cursor: pointer;
+        }
+
+        .fwwz {
+            width: 250px;
+            height: 20px;
+            float: left;
+            font-size: 14px;
+            margin-top: 13px;
+            margin-left: 10px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .fwwz:hover {
+            color: #e78442;
+            cursor: pointer;
+        }
+
+        .centerd {
+            width: 570px;
+            height: 748px;
+            float: left;
+            /* background-color: #666; */
+            margin-left: 26px;
+            margin-top: 15px;
+        }
+
+        .centerd-b {
+            width: 100%;
+            height: 360px;
+            float: left;
+            /* background-color: #a4b4c4; */
+            /* margin-top: 10px; */
+
+        }
+
+        /* 列表前小圆圈 */
+        .yq {
+            width: 5px;
+            height: 5px;
+            float: left;
+            background: #ffffff;
+            border-radius: 50%;
+            border: 2px solid #0d74dc;
+            margin-top: 18px;
+            margin-right: 8px;
+            transition: 1s;
+        }
+
+        .centerd-b ul li {
+            font-size: 16px;
+            list-style: none;
+            line-height: 45px;
+            transition: 2s;
+            color: #333;
+        }
+
+        .centerd-b ul li:hover {
+            color: #e78442;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .centerd-b ul li:hover .yq {
+            cursor: pointer;
+            border: 2px solid #e78442;
+            background: #e78442;
+            transition: 1s;
+        }
+
+        .centerd-c {
+            width: 100%;
+            height: 400px;
+            float: left;
+            /* background-color: #e78442; */
+            margin-top: 10px;
+            border-top: 1px solid #0d74dc;
+        }
+
+        .centerd-c-a {
+            width: 185px;
+            height: 104px;
+            float: left;
+            background-color: #3253a7;
+            overflow: hidden;
+            border-radius: 5px;
+            margin-left: 7.5px;
+            margin-top: 10px;
+        }
+
+        .centerd-c-a img {
+            transition: 1s;
+        }
+
+        .centerd-c-a img:hover {
+            transform: scale(1.1);
+            transition: 1s;
+        }
+
+        .centerd-c-b {
+            width: 100%;
+            height: 74px;
+            float: left;
+            /* background-color: #333; */
+            margin-top: 15px;
+        }
+
+        .centerd-c-b-a {
+            width: 134px;
+            height: 74px;
+            float: left;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .centerd-c-b-a img {
+            transition: 1s;
+        }
+
+        .centerd-c-b-a img:hover {
+            transform: scale(1.1);
+            transition: 1s;
+        }
+
+        .centerd-c-b-wz {
+            width: 416px;
+            height: 46px;
+            float: left;
+            /* background-color: rgb(252, 252, 252); */
+            margin-left: 15px;
+            margin-top: 14px;
+            line-height: 23px;
+        }
+
+        .centerd-c-b-wz:hover {
+            color: #e78442;
+            cursor: pointer;
+        }
+
+        .centere {
+            width: 310px;
+            height: 748px;
+            float: left;
+            /* background-color: aquamarine; */
+            margin-left: 26px;
+            margin-top: 15px;
+        }
+
+        .centere-a {
+            width: 310px;
+            height: 174px;
+            float: left;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .centere-a img {
+            width: 310px;
+            height: 174px;
+            transition: 1s;
+        }
+
+        .centere-a img:hover {
+            transform: scale(1.3);
+            transition: 1s;
+        }
+
+        .centere-a-wz {
+            width: 310px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, 0.2);
+            position: absolute;
+            margin-top: -35px;
+            color: white;
+            /* margin-left: 10px; */
+            line-height: 30px;
+            text-align: center;
+        }
+
+        .centere-b {
+            height: 202px;
+            width: 150px;
+            float: left;
+            overflow: hidden;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .centere-b img {
+            height: 202px;
+            width: 150px;
+        }
+
+        .centere-c {
+            width: 100%;
+            height: 105px;
+            float: left;
+            /* background-color: #e78442; */
+            margin-top: 10px;
+        }
+
+        .centere-c ul li {
+            list-style: none;
+            line-height: 35px;
+            font-size: 16px;
+        }
+
+        .centere-c ul li:hover {
+            color: #e78442;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .centere-c ul li:hover .yq {
+            cursor: pointer;
+            border: 2px solid #e78442;
+            background: #e78442;
+            transition: 1s;
+        }
+
+        .footer {
+            width: 100%;
+            height: 240px;
+            float: left;
+            background-color: rgb(11, 58, 138);
+            /* margin-top: 65px; */
+
+        }
+
+        .footera {
+            width: 1200px;
+            height: 40px;
+            float: left;
+            /* background-color: black; */
+            margin-left: 365px;
+            color: white;
+            line-height: 40px;
+            text-align: center;
+        }
+
+        .footera:hover {
+            color: #e78442;
+        }
+
+        .footer-logo {
+            position: absolute;
+            height: 42px;
+            width: 34px;
+            margin-left: 130px;
+            margin-top: 4px;
+        }
+
+        .footer-logoa {
+            position: absolute;
+            height: 20px;
+            width: 18px;
+            margin-left: 1570px;
+            margin-top: 155px;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="aa">
+
+        <div class="header ">
+            <ul>
+                <li>
+                    <a href="../html/culture.html">古典文化</a>
+                </li>
+                <li>
+                    <a href="../html/news.html">新闻中心</a>
+                </li>
+                <li>
+                    <a href="../html/Movies.html">现代影视</a>
+                </li>
+                <li><a href="../html/national.html">国潮当立</a></li>
+            </ul>
+            <div class="sy"><a href="../html/homepage.html">首页</a></div>
+        </div>
+        <div class="header-tab">
+            <ul>
+                <li><img src="../images/icon.png" alt="">首页 |</li>
+                <li><img src="../images/icon1.png" alt="">时政 |</li>
+                <li><img src="../images/icon2.png" alt="">国际 |</li>
+                <li><img src="../images/icon3.png" alt="">财经 |</li>
+                <li><img src="../images/icon4.png" alt="">视频 |</li>
+                <li><img src="../images/icon5.png" alt="">富媒体 |</li>
+                <li><img src="../images/icon6.png" alt="">科技 |</li>
+                <li><img src="../images/icon7.png" alt="" style="margin-top: 17px;">文化 |</li>
+                <li><img src="../images/icon8.png" alt="" style="margin-top: 17px;">健康 |</li>
+                <li><img src="../images/icon9.png" alt="" style="margin-top: 17px;">军事 |</li>
+                <li style="width: 130px;"><img src="../images/icon10.png" alt="" style="margin-top: 17px;">思客智库 |</li>
+                <li><img src="../images/icon11.png" alt="">政务 |</li>
+                <li><img src="../images/icon12.png" alt="" style="margin-top: 17px;">推荐</li>
+            </ul>
+        </div>
+        <div class="header-bainian">百年初心成大道　万里征程作雄行——以习近平同志为核心的党中央领导开展党史学习教育纪实</div>
+        <div class="header-zsj">
+            <a href="">习近平总书记亲自谋划、亲自部署、亲自推动</a>
+            <a href="">全党上下高度重视、组织有序、扎实推进</a>
+            <a href="">广大党员在党史学习教育中感悟初心、践行使命</a>
+            <a href="">专题</a>
+        </div>
+        <div class="center">
+            <div class="centera">
+                <!-- 轮播 -->
+                <div class="centera-a">
+                    <div class="lb-box" id="lb-1">
+                        <!-- 轮播内容 -->
+                        <div class="lb-content">
+                            <div class="lb-item active">
+                                <a href="#">
+                                    <img src="../images/lb1.jpg" alt="picture loss">
+                                    <span>我是党员,我为群众办实事</span>
+                                </a>
+                            </div>
+                            <div class="lb-item">
+                                <a href="#">
+                                    <img src="../images/lb2.jpg" alt="picture loss">
+                                    <span>中国网事·感动2021 年度人物颁奖典礼</span>
+                                </a>
+                            </div>
+                            <div class="lb-item">
+                                <a href="#">
+                                    <img src="../images/lb3.jpg" alt="picture loss">
+                                    <span>国家相册第四季《淇淇,你别走》</span>
+                                </a>
+                            </div>
+                            <div class="lb-item">
+                                <a href="#">
+                                    <img src="../images/lb4.jpg" alt="picture loss">
+                                    <span>美媒如何“唱”疫？</span>
+                                </a>
+                            </div>
+                            <div class="lb-item">
+                                <a href="#">
+                                    <img src="../images/lb5.jpg" alt="picture loss">
+                                    <span>2021记住这些人</span>
+                                </a>
+                            </div>
+                            <div class="lb-item">
+                                <a href="#">
+                                    <img src="../images/lb6.jpg" alt="picture loss">
+                                    <span>全城战疫下,研究生考试在雪中开启</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 轮播标志 -->
+                        <ol class="lb-sign">
+                            <li class="active">1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li>6</li>
+
+                        </ol>
+                        <!-- 轮播控件 -->
+                        <div class="lb-ctrl left">＜</div>
+                        <div class="lb-ctrl right">＞</div>
+                    </div>
+                </div>
+                <!-- 轮播 -->
+                <div class="centera-b">
+                    <div class="centera-b-tp">
+                        <img src="../images/d.jpg" alt="">
+                    </div>
+                    <div class="centera-b-a">
+                        <div class="centera-b-a-wz">
+                            《中国有“旗”绩》：奋斗百年路,启航新征程</div>
+                    </div>
+                    <div class="centera-b-b"></div>
+                </div>
+                <div class="centera-c">
+                    <div class="centera-ca"><img src="../images/a.gif" alt="">
+                        <div class="centera-ca-wz">Vlog | 干饭人，赣饭“菜”来了！</div>
+                    </div>
+                    <div class="centera-cb"><img src="../images/b.gif" alt="">
+                        <div class="centera-ca-wz">【我们的2021】千年梦圆 新程再启</div>
+                    </div>
+                </div>
+                <div class="centera-d">
+                    <img src="../images/c.jpg" alt="">
+                    <div class="centera-ca-wz" style="margin-top:-55px">共同的追求｜那个视障小女孩，如何“听见”电影里的“颜色”</div>
+                </div>
+            </div>
+            <div class="centerb">
+                <img src="../images/head-xxjxs-bg.png" alt="" style="margin-top: -9px;">
+                <img src="../images/head-xxjxs-03.png" alt="" style="margin-top: -65px;margin-left: 15px;">
+                <div class="centerb-b">
+                    <div class="centerb-gif"></div>
+
+                    <div class="centerb-bS">
+                        <ul>
+                            <li>两办:做好2022年元旦春节期间有关工作</li>
+                            <li>六中全会精神在基础 | 小车窗里的时代之变</li>
+                            <li>关键指标稳中有进,外界看好中国经济表现</li>
+                            <li>冬奥会 | 中国速度滑冰队获22个参赛席位</li>
+                            <li>普京:美干扰北京东奥会是妄图遏制中国发展</li>
+                            <li>韩国总统文在寅将赦免前总统朴槿惠</li>
+                            <li>23日新增本土确诊病例55例 其中陕西52例</li>
+                            <li>西安超级传播链初步厘清!26人被处理</li>
+                            <li>寒潮预警升级至黄色!部分地区降温超12°C</li>
+                            <li>除了年终奖、十三薪,年底还可领这几笔钱</li>
+                            <li>中方回应英特尔有关供应商信函的声明</li>
+                            <li>中央网信办:打击流量造假、黑关公等乱象</li>
+                            <li>环保督察 | 宁夏中宁:非法采矿伤痕累累</li>
+                            <li>在飞火箭身高第一:长七改遥三一箭双星</li>
+                            <li>[我们的2021]千年梦圆 新程再启</li>
+                            <li>2021,我们记住了他们奋斗的模样</li>
+                            <li>盘点2021年外媒报道中国十大关键词</li>
+                            <li>NHL球员将不再出站东奥</li>
+                            <li>一图看清陕西26名防疫不力责任人</li>
+                            <li>普京:美国带导弹站在自家门口</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="centerb-c">
+                    <div class="sz">网评热点</div>
+                    <div class="notice">
+                        <ul>
+                            <li> · 陪伴虽好监管不能少</li>
+                            <li> · 群众的认可最宝贵</li>
+                            <li> · 呵护每一位学子的读研梦</li>
+                            <li> · 冰雪之花开遍大江南北</li>
+                            <li> · App适老化改造</li>
+                            <li> · 筑牢冬奥防疫措施</li>
+                            <li> · 做好低碳消费这篇大文章</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sbft"><img src="../images/suibian.jpg" alt=""></div>
+            <div class="sbft"><img src="../images/suibina.jpg" alt=""></div>
+            <div class="centerc">
+                <div class="centerc-a">
+                    <img src="../images/xtba.png" alt="">新闻热榜
+                </div>
+                <div class="centerc-b">
+                    <ul>
+                        <li><i style="color: red;"> 1 </i> 2020年全国两会召开时间确定</li>
+                        <li><i style="color: royalblue;"> 2 </i> 外交部回应美方签署涉新疆法案</li>
+                        <li><i style="color: tomato;"> 3 </i> 西安“超级传播链”初步厘清</li>
+                        <li><i> 4 </i> 扫黑除恶有了专门法！</li>
+                        <li><i> 5 </i> 疫情全球快速扩散，美国难辞其咎！</li>
+                        <li><i> 6 </i> 长白山，通高铁了！</li>
+                        <li><i> 7 </i> 中央气象台发布寒潮黄色预警</li>
+                        <li><i> 8 </i> 韩国前总统朴槿惠将获特赦</li>
+                        <li><i> 9 </i> 西安处理26名防疫不力相关责任人</li>
+                        <li><i> 10 </i> 罪犯张成功今日被执行死刑</li>
+                    </ul>
+                </div>
+                <div class="centerc-c">
+                    <div class="centerc-c-a">
+                        <div class="centerc-c-a-an">话题</div>
+                        <div class="centerc-c-a-wz">#权威面对面#</div>
+                    </div>
+                    <div class="centerc-c-b">
+                        <img src="../images/tt.jpg" alt="">
+                        <div class="centerc-c-bimgwz">筑牢经济“压舱石”，激发高质量发展内生动力</div>
+                    </div>
+                    <div class="fwwz">1、为科技政策扎实落地“划重点”</div>
+                    <div class="fwwz">2、保持经济运行在合理区间</div>
+                </div>
+            </div>
+            <div class="centerd">
+                <div class="centerc-a">
+                    <img src="../images/xtbb.png" alt="">深度聚焦
+                </div>
+                <div class="centerd-b">
+                    <ul>
+                        <li>
+                            <div class="yq"></div>全国人大常委会组成人员为妇女权益保障“支招”审议黑土地保护法草案
+                        </li>
+                        <li>
+                            <div class="yq"></div>中组部下发通知要求在两节期间走访慰问生活困难党员、老党员、老干部
+                        </li>
+                        <li>
+                            <div class="yq"></div>国家体育总局印发《公共体育场馆基本公共服务规范》
+                        </li>
+                        <li>
+                            <div class="yq"></div>新时代新作为新篇章丨广西桂林：在最美山水间奏响民族交融曲
+                        </li>
+                        <li>
+                            <div class="yq"></div>“中国网事·感动2021”十大年度网络人物揭晓群像侧记致敬平凡英雄
+                        </li>
+                        <li>
+                            <div class="yq"></div>广东省政府原副秘书长曹达华严重违纪违法被开除党籍和公职
+                        </li>
+                        <li>
+                            <div class="yq"></div>深入学习贯彻党的十九届六中全会精神丨坚持敢于斗争 勇于自我革命
+                        </li>
+                        <li>
+                            <div class="yq"></div>让“有色”更有特色——江西有色金属产业创新之路观察
+                        </li>
+                    </ul>
+                </div>
+                <div class="centerd-c">
+                    <div class="centerc-c-a-an" style="font-size: 15px;">组图</div>
+                    <div class="centerc-c-a-wz" style="width: 440px;font-size: 16px;">新华全媒+｜我们在古城遇见从容——西安防疫升级首日见闻</div>
+                    <div class="centerd-c-a" style="margin-left: 0px;">
+                        <img src="../images/yqa.jpg" alt="">
+                    </div>
+                    <div class="centerd-c-a">
+                        <img src="../images/yqb.jpg" alt="">
+                    </div>
+                    <div class="centerd-c-a">
+                        <img src="../images/yqc.jpg" alt="">
+                    </div>
+                    <div class="centerd-c-b">
+                        <div class="centerd-c-b-a">
+                            <img src="../images/xxtpa.jpg" alt="">
+                        </div>
+                        <div class="centerd-c-b-wz">走近冬奥｜看看这些满含“中国式浪漫”的冬奥场馆 国际奥委会主席巴赫：北京冬奥会将把世界凝聚在一起</div>
+                    </div>
+                    <div class="centerd-c-b">
+                        <div class="centerd-c-b-a">
+                            <img src="../images/xxtpb.jpg" alt="">
+                        </div>
+                        <div class="centerd-c-b-wz">经“9”相伴 共创美好 光大银行全新发布手机银行9.0</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="centere">
+                <div class="centerc-a">
+                    <img src="../images/xtbc.png" alt="">新闻视频
+                </div>
+                <div class="centere-a"><img src="../images/xxk.gif" alt="">
+                    <div class="centere-a-wz">如果徐霞客今天游贵州</div>
+                </div>
+
+                <div class="centere-b"><img src="../images/dta.gif" alt=""></div>
+                <div class="centere-b" style="margin-left: 10px;"><img src="../images/dtb.gif" alt=""></div>
+                <div class="centere-c">
+                    <ul>
+                        <li>
+                            <div class="yq" style="margin-top: 13px;"></div>冬日俯瞰布拉克
+                        </li>
+                        <li>
+                            <div class="yq" style="margin-top: 13px;"></div>冬至雾海 城市仙境
+                        </li>
+                        <li>
+                            <div class="yq" style="margin-top: 13px;"></div>90秒 打卡重庆城市文化之美
+                        </li>
+                    </ul>
+                </div>
+                <div class="centere-a"><img src="../images/dtaaa.gif" alt=""></div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="footera" style="margin-top: 45px;">新华社主办 版权所有：新华网股份有限公司 Copyright © 2000- 2021 XINHUANET.com All
+            Rights Reserved.</div>
+        <div class="footera">本站所刊登的新华社及新华网各种新闻﹑信息和各种专题专栏资料，均为新华网版权所有，未经协议授权禁止下载使用。</div>
+        <div class="footera">新华社简介 | 公司官网 | 联系我们 | 我要链接 | 版权声明 | 法律顾问 | 广告服务 | 技术服务中心 | 新华云 | 违法和不良信息举报电话：（010）63070940
+            京ICP证010042号</div>
+        <div class="footera">
+            <div class="footer-logo"><img src="../images/foot-ga.png" alt=""></div>
+            京公网安备：11000002000015号 | 网上传播视听节目许可证(0103020) | 中国互联网视听节目服务自律公约 | 可信网站认证
+        </div>
+        <div class="footer-logoa"><img src="../images/foo-gb.png" alt=""></div>
+    </div>
+
+</body>
+
+<script src="../js/jquery-3.1.0.js"></script>
+<script>
+    function noticeUp(obj, top, time) {
+        //设置函数形参 调用对象 上移距离 时间间隔
+        $(obj).animate({
+            marginTop: top
+            //调用后执行动画效果为上边距
+        }, time, function () {
+            $(this).css({
+                marginTop: "0"
+            }).find(":first").appendTo(this);
+            // 找到调用对象的第一个子元素来执行函数
+        })
+    }
+
+
+    $(function () {
+        // 调用 公告滚动函数
+        //500 移动时间 2000 间隔时间
+        setInterval("noticeUp('.notice ul','-35px',500)", 2000);
+
+    });
+</script>
+
+</html>

@@ -1,0 +1,160 @@
+* {
+	padding: 0;
+	margin: 0;
+	/* font-size: 12px */
+}
+
+/* body {
+	background: #333;
+} */
+
+/* ul,
+li {
+	list-style: none;
+} */
+
+/* img {
+	border: 0;
+} */
+
+#zSlider {
+	margin-top: 30px;
+	width: 1723px;
+	overflow: hidden;
+	background-color: #000;
+	margin-left: 100px;
+	float: left;
+	/* border-radius: 10px; */
+}
+
+#picshow {
+	position: relative;
+}
+
+#picshow,
+#picshow_img {
+	width: 1344px;
+	height: 756px;
+	overflow: hidden;
+	float: left;
+}
+
+#picshow_img li {
+	width: 1344px;
+	height: 756px;
+	overflow: hidden;
+	float: left;
+	display: none;
+}
+
+#picshow_img img {
+	width: 1344px;
+	height: 756px;
+}
+
+
+
+#select_btn {
+	width: 379px;
+	height: 756px;
+	color: #111;
+	float: left;
+	/* display: inline; */
+	background-color: rgb(36, 35, 35);
+}
+
+#select_btn li {
+	/* padding: 9px 11px 0px 9px; */
+	width: 379px;
+	height: 64px;
+	/* border-top: 1px solid #474747; */
+	cursor: pointer;
+	transition: all .7s ease 0s;
+	background-color: rgb(36, 35, 35);
+	list-style: none;
+
+}
+
+#select_btn li:hover {
+	background-color: rgb(19, 19, 19);
+
+}
+
+
+#select_btn li.current {
+	background-color: rgb(19, 19, 19);
+	color: rgb(160, 115, 76) !important;
+	text-decoration: none;
+	font-size: 22px;
+}
+
+
+
+#select_btn li.current:hover {
+	background-color: rgb(19, 19, 19);
+
+}
+
+#select_btn>li>.current>.select_text:hover {
+	color: rgb(160, 115, 76);
+	text-decoration: none;
+	font-size: 22px;
+	/* transition: 0.5s; */
+}
+
+#select_btn a {
+	color: rgb(160, 115, 76);
+	text-decoration: none;
+	font-size: 22px;
+}
+
+
+
+#select_btn .select_text {
+	height: 64px;
+	font-size: 16px;
+	overflow: hidden;
+	display: block;
+	color: white;
+	line-height: 64px;
+	text-indent: 40px;
+	text-decoration: none;
+}
+
+#select_btn .select_text:hover {
+	color: rgb(160, 115, 76);
+	text-decoration: none;
+	font-size: 22px;
+	/* transition: 0.5s; */
+}
+
+.hot {
+	font-size: 24px;
+	text-indent: 10px;
+	height: 40px;
+	line-height: 40px;
+	margin-top: 5px;
+	width: 300px;
+	/* float: left; */
+	color: white;
+}
+
+.hot i {
+	height: 40px;
+	line-height: 40px;
+	font-size: 28px;
+	color: rgb(214, 8, 8);
+	width: 40px;
+}
+
+.yc {
+	color: rgb(160, 115, 76);
+	margin-left: 10px;
+	font-size: 16px;
+	/* background-color: #000; */
+	display: none;
+}
+
+#select_btn ul li .select_text:hover .yc {
+	display: inline;
+}

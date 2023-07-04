@@ -1,0 +1,95 @@
+﻿<!--
+ * @Author: your name
+ * @Date: 2021-12-25 15:37:06
+ * @LastEditTime: 2022-01-10 00:26:14
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \WEBPROJECT\常用\js焦点图片自动轮播切换代码\index.html
+-->
+<!DOCTYPE HTML>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>js焦点图片自动轮播切换代码</title>
+	<link rel="stylesheet" href="../css/lb.css">
+	<script src="../js/lb.js"></script>
+	<link rel="icon" type="image/x-ico" href="../logoa.ico">
+	<script>
+		window.onload = function () {
+			// 轮播选项
+			const options = {
+				id: 'lb-1',              // 轮播盒ID
+				speed: 600,              // 轮播速度(ms)
+				delay: 3000,             // 轮播延迟(ms)
+				direction: 'left',       // 图片滑动方向
+				moniterKeyEvent: true,   // 是否监听键盘事件
+				moniterTouchEvent: true  // 是否监听屏幕滑动事件
+			}
+			const lb = new Lb(options);
+			lb.start();
+		}
+	</script>
+</head>
+
+<body>
+	<div class="lb-box" id="lb-1">
+		<!-- 轮播内容 -->
+		<div class="lb-content">
+			<div class="lb-item active">
+				<a href="#">
+					<img src="../images/lb1.jpg" alt="picture loss">
+					<span>我是党员,我为群众办实事</span>
+				</a>
+			</div>
+			<div class="lb-item">
+				<a href="#">
+					<img src="../images/lb2.jpg" alt="picture loss">
+					<span>中国网事·感动2021 年度人物颁奖典礼</span>
+				</a>
+			</div>
+			<div class="lb-item">
+				<a href="#">
+					<img src="../images/lb3.jpg" alt="picture loss">
+					<span>国家相册第四季《淇淇,你别走》</span>
+				</a>
+			</div>
+			<div class="lb-item">
+				<a href="#">
+					<img src="../images/lb4.jpg" alt="picture loss">
+					<span>美媒如何“唱”疫？</span>
+				</a>
+			</div>
+			<div class="lb-item">
+				<a href="#">
+					<img src="../images/lb5.jpg" alt="picture loss">
+					<span>2021记住这些人</span>
+				</a>
+			</div>
+			<div class="lb-item">
+				<a href="#">
+					<img src="../images/lb6.jpg" alt="picture loss">
+					<span>全城战疫下,研究生考试在雪中开启</span>
+				</a>
+			</div>
+		</div>
+		<!-- 轮播标志 -->
+		<ol class="lb-sign">
+			<li class="active">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+
+		</ol>
+		<!-- 轮播控件 -->
+		<div class="lb-ctrl left">＜</div>
+		<div class="lb-ctrl right">＞</div>
+	</div>
+
+</body>
+
+</html>

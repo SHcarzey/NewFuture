@@ -1,0 +1,2146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>古典文化</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_3041768_30sqh8qi0io.css">
+    <link rel="icon" type="image/x-ico" href="../logoa.ico">
+    <style>
+        @font-face {
+            font-family: 'myfont';
+            src: url('../css/fonts/hg.ttf');
+        }
+
+        .Myfont {
+            font-family: myfont;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: myfont;
+        }
+
+        body {
+            height: 3000px;
+            background-color: rgb(230, 224, 210);
+        }
+
+        ::-webkit-scrollbar {
+            width: 20px;
+            /*height: 4px;*/
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+            background: #990202;
+        }
+
+        ::-webkit-scrollbar-track {
+            /* -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); */
+            /* border-radius: 10px; */
+            background: rgb(196, 191, 191);
+
+        }
+
+
+
+        .header {
+            height: 120px;
+            width: 1900px;
+            /* float: left; */
+            background-color: rgb(0, 0, 0);
+            /* position: fixed; */
+            /* border-bottom: 5px solid rgb(195, 39, 43); */
+            top: 0;
+            z-index: 9;
+            transition: 1s;
+            background-image: url(../image/headerbjc.jpg);
+
+        }
+
+        .header ul li {
+            display: block;
+            font-size: 40px;
+            color: rgb(255, 255, 255);
+            line-height: 120px;
+            float: left;
+            list-style: none;
+            margin-left: 50px;
+            font-weight: bold;
+        }
+
+        .header ul li a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+
+        .header ul li:hover {
+            color: rgb(195, 39, 43);
+            cursor: pointer;
+        }
+
+        .header ul li a:hover {
+            color: rgb(195, 39, 43);
+        }
+
+        .sy {
+            display: block;
+            font-size: 40px;
+            color: rgb(255, 255, 255);
+            line-height: 120px;
+            float: left;
+            list-style: none;
+            margin-left: 930px;
+            font-weight: bold;
+        }
+
+        .sy a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .sy a:hover {
+            color: rgb(195, 39, 43);
+        }
+
+        /* 第二导航栏 */
+        .headera {
+            width: 100%;
+            height: 50px;
+            float: left;
+            background-color: rgb(149, 25, 27);
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .headera ul li:nth-child(1) {
+            margin-left: 0px;
+            background-color: rgb(119, 20, 22);
+        }
+
+        .headera ul li {
+            float: left;
+            list-style: none;
+            font-size: 28px;
+            color: aliceblue;
+            line-height: 50px;
+            margin-left: 0px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .headera ul li:hover {
+            background-color: rgb(119, 20, 22);
+            cursor: pointer;
+        }
+
+        .center {
+            width: 72.35%;
+            float: left;
+            margin-left: 13.9%;
+            height: 3300px;
+            background-color: rgb(230, 224, 210);
+
+        }
+
+        .centera {
+            width: 1375px;
+            float: left;
+            /* background-color: black; */
+            height: 500px;
+            margin-top: 30px;
+        }
+
+        .centera-a {
+            width: 950px;
+            float: left;
+            background-color: white;
+            height: 500px;
+        }
+
+        .centera-a-a {
+            width: 365px;
+            height: 500px;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .centera-a-a-wz {
+            width: 100%;
+            height: 50px;
+            margin-top: 20px;
+            font-weight: bold;
+            float: left;
+            font-size: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: rgb(247, 208, 157);
+        }
+
+        .centera-a-a-wza {
+            width: 100%;
+            height: 30px;
+            /* margin-top: 5px; */
+            font-weight: bold;
+            float: left;
+            font-size: 18px;
+            line-height: 30px;
+            text-align: center;
+            color: rgb(241, 234, 224);
+        }
+
+        .centera-a-a-k {
+            height: 92px;
+            width: 92%;
+            float: left;
+            /* background-color: aliceblue; */
+            margin-top: 10px;
+            margin-left: 4%;
+            background-image: url(../imagea/login_ku03.png);
+        }
+
+        .wzaa {
+            height: 40px;
+            width: 100%;
+            float: left;
+            /* background-color: #ccc; */
+            line-height: 40px;
+            font-size: 20px;
+            color: aliceblue;
+        }
+
+        .ji_yi {
+            width: 28px;
+            height: 28px;
+            float: left;
+            /* background-color: antiquewhite; */
+            margin-top: 5px;
+            margin-left: 20px;
+        }
+
+        .centera-a-a-jq {
+            width: 94%;
+            height: 250px;
+            float: left;
+            /* background-color: aliceblue; */
+            margin-left: 3%;
+            margin-top: 20px;
+        }
+
+        .hda {
+            width: 100%;
+            height: 32px;
+            float: left;
+            /* background-color: #ccc; */
+            display: flex;
+            justify-content: center;
+        }
+
+        .jq {
+            width: 100px;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            background-color: rgb(230, 225, 205);
+            border-radius: 20px;
+            margin-left: 15px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .jq:hover {
+            background-color: brown;
+            color: white;
+        }
+
+        .jq:nth-child(1) {
+            margin-left: 0px;
+        }
+
+        .hda-tp {
+            width: 200;
+            height: 200px;
+            float: left;
+            background-color: black;
+            margin-top: 20px;
+            overflow: hidden;
+            border-radius: 20%;
+            margin-left: 80px;
+        }
+
+        .wzaa:nth-child(1) {
+            margin-top: 6px;
+        }
+
+        .centera-b {
+            width: 400px;
+            float: left;
+            height: 500px;
+            background-color: rgb(242, 217, 161);
+            margin-left: 25px;
+            background-image: radial-gradient(rgb(238, 206, 138), rgb(243, 206, 126), rgb(247, 209, 128))
+        }
+
+        .centera-b-a {
+            width: 100%;
+            height: 50px;
+            float: left;
+            /* background-color: rgb(7, 139, 255); */
+            font-size: 36px;
+            line-height: 50px;
+            font-weight: bold;
+            color: rgb(149, 25, 27);
+            text-indent: 0.8em;
+            margin-top: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .centera-b-b {
+            width: 100%;
+            height: 85px;
+            float: left;
+            /* background-color: aliceblue; */
+            border-bottom: 1px solid #ccc;
+        }
+
+        .centera-b-b-a {
+            width: 90%;
+            height: 75px;
+            float: left;
+            /* background-color: black; */
+            margin-top: 2.5%;
+            margin-left: 20px;
+        }
+
+        .qd {
+            width: 40px;
+            height: 40px;
+            float: left;
+            background-color: rgb(149, 25, 27);
+            margin-top: 17px;
+            margin-left: 15px;
+            border-radius: 7px;
+            text-align: center;
+        }
+
+
+        .qd i {
+            font-size: 24px;
+            color: rgb(238, 206, 138);
+            line-height: 40px;
+        }
+
+        .dwz {
+            width: 250px;
+            height: 30px;
+            float: left;
+            /* background-color: aliceblue; */
+            margin-top: 10px;
+            margin-left: 10px;
+            font-size: 26px;
+            line-height: 30px;
+            /* font-weight: bold; */
+        }
+
+        .xwz {
+            width: 250px;
+            height: 30px;
+            float: left;
+            /* background-color: aliceblue; */
+            margin-left: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .bg {
+            width: 100%;
+            height: 125px;
+            float: left;
+            /* background-color: #ccc; */
+            margin-top: 30px;
+        }
+
+        .bg-a {
+            width: 100%;
+            height: 60px;
+            float: left;
+            display: flex;
+            justify-content: center;
+            /* background-color: aliceblue; */
+        }
+
+        .bg-a:nth-child(2) {
+            margin-top: 5px;
+        }
+
+        .bg-a ul li {
+            float: left;
+            width: 40px;
+            height: 60px;
+            /* background-color: #ccc; */
+            list-style: none;
+            margin-left: 57px;
+            text-align: center;
+        }
+
+        .bg-a ul li:nth-child(1) {
+            margin-left: 0px;
+        }
+
+        .bg-a ul li i {
+            font-size: 35px;
+            color: rgb(149, 25, 27);
+            line-height: 40px;
+        }
+
+        .bg-a ul li i:hover {
+            color: black;
+        }
+
+
+        .xxwz {
+            width: 40px;
+            height: 20px;
+            float: left;
+            /* background-color: black; */
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .centerb {
+            width: 100%;
+            float: left;
+            /* background-color: rgb(255, 255, 255); */
+            height: 1200px;
+            margin-top: 40px;
+        }
+
+        .tab {
+            float: left;
+            width: 100%;
+            height: 50px;
+            background-color: rgb(230, 224, 210);
+            border-bottom: 1px solid rgb(201, 199, 199);
+        }
+
+        .tab-a {
+            width: 200px;
+            height: 47px;
+            float: left;
+            /* background-color: #ccc; */
+            line-height: 50px;
+            font-size: 30px;
+            font-weight: bold;
+            border-bottom: 3px solid rgb(148, 24, 26);
+        }
+
+        .tab-a-a {
+            width: 32px;
+            height: 32px;
+            float: left;
+            /* background-color: black; */
+            border-radius: 50%;
+            border: 1px solid #baa28a;
+            text-align: center;
+            line-height: 32px;
+            font-weight: 100;
+            margin-top: 5px;
+        }
+
+        .tab-b {
+            width: 600px;
+            height: 50px;
+            float: left;
+            /* background-color: rgb(253, 252, 252); */
+            margin-left: 574px;
+        }
+
+        .tab-b ul li {
+            float: left;
+            list-style: none;
+            padding-left: 8px;
+            padding-right: 8px;
+            line-height: 50px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .tab-b ul li:hover {
+            color: brown;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .centerb-a {
+            width: 975px;
+            height: 1200px;
+            float: left;
+            background-color: rgb(230, 224, 210);
+        }
+
+        .centerb-a-a {
+            height: 325px;
+            width: 975px;
+            float: left;
+            /* background-color: #ccc; */
+            margin-top: 30px;
+        }
+
+        .centerb-a-a img {
+            float: left;
+        }
+
+        .centerb-a-a-a {
+            width: 500px;
+            height: 325px;
+            float: left;
+            /* background-color: aqua; */
+            margin-left: 30px;
+        }
+
+        .centerb-a-a-a-a {
+            width: 500px;
+            height: 107px;
+            float: left;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .bt {
+            width: 100%;
+            height: 35px;
+            float: left;
+            /* background-color: rgb(255, 255, 255); */
+            font-size: 28px;
+            line-height: 35px;
+            font-weight: bold;
+            color: brown;
+        }
+
+        .bt:hover {
+            /* color: black; */
+            text-decoration: underline;
+        }
+
+        .bt-wz {
+            width: 100%;
+            height: 70px;
+            float: left;
+            /* background-color: rgb(255, 255, 255); */
+            font-size: 20px;
+            line-height: 35px;
+            font-weight: bold;
+
+        }
+
+        .bt-wz span {
+            color: brown;
+        }
+
+        .bt-wz span:hover {
+            text-decoration: underline;
+        }
+
+        .centerb-a-b {
+            width: 950px;
+            height: 385px;
+            float: left;
+            /* background-color: black; */
+            margin-top: 30px;
+        }
+
+        .centerb-a-b-a {
+            width: 420px;
+            height: 385px;
+            float: left;
+            /* background-color: bisque; */
+        }
+
+        .gxqm {
+            width: 420px;
+            height: 30px;
+            float: left;
+            /* background-color: #ccc; */
+        }
+
+        .gxqm-wz {
+            height: 30px;
+            width: 150px;
+            float: left;
+            /* background-color: rgb(255, 255, 255); */
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 30px;
+            border-left: 5px solid brown;
+        }
+
+        .gxqm-gd {
+            height: 30px;
+            width: 50px;
+            float: left;
+            /* background-color: aliceblue; */
+            font-size: 19px;
+            line-height: 30px;
+            color: rgb(3, 2, 0);
+            margin-left: 215px;
+            font-weight: bold;
+        }
+
+        .gxqm-gd:hover {
+            color: brown;
+            text-decoration: underline;
+        }
+
+        .threebook {
+            width: 100%;
+            height: 160px;
+            /* background-color: black; */
+            float: left;
+            margin-top: 15px;
+        }
+
+        .threebook ul li {
+            width: 127px;
+            float: left;
+            height: 160px;
+            list-style: none;
+            /* background-color: aliceblue; */
+            margin-left: 19.5px;
+        }
+
+        .threebook ul li img {
+            width: 127px;
+        }
+
+        .threebook ul li:nth-child(1) {
+            margin-left: 0px;
+        }
+
+        .centerb-a-b-a-a {
+            width: 100%;
+            height: 36px;
+            float: left;
+            /* background-color: blueviolet; */
+            margin-top: 8.9px;
+        }
+
+        .centerb-a-b-a-a span {
+            display: block;
+            float: left;
+            height: 36px;
+            line-height: 36px;
+            font-size: 22px;
+            font-weight: bold;
+
+        }
+
+        .centerb-a-b-a-a div {
+            float: left;
+            height: 36px;
+            line-height: 36px;
+            font-size: 22px;
+            font-weight: bold;
+            margin-left: 30px;
+            overflow: hidden;
+        }
+
+        .centerb-a-b-a-a div:hover {
+            color: brown;
+            text-decoration: underline;
+        }
+
+        .centerb-a-b-b {
+            width: 500px;
+            height: 385px;
+            float: left;
+            /* background-color: aliceblue; */
+            margin-left: 30px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .c-tp {
+            width: 100%;
+            height: 90px;
+            float: left;
+            background-color: rgb(223, 217, 203);
+
+        }
+
+        .c-tp img {
+            float: left;
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+
+        .c-tp-wz {
+            float: left;
+            height: 70px;
+            line-height: 35px;
+            width: 370px;
+            /* background-color: #ccc; */
+            margin-top: 10px;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .c-tp-wz:hover {
+            color: brown;
+        }
+
+        .ylx {
+            width: 100%;
+            height: 265px;
+            float: left;
+            margin-top: 25px;
+            /* background-color: black; */
+        }
+
+        .ylx ul li {
+            height: 40px;
+            font-size: 24px;
+            /* font-weight: bold; */
+            list-style: none;
+        }
+
+        .ylx ul li:hover {
+            color: brown;
+            text-decoration: underline;
+        }
+
+        .centerb-a-c {
+            width: 950px;
+            height: 385px;
+            float: left;
+            /* background-color: rgb(230, 86, 86); */
+            margin-top: 10px;
+        }
+
+        .twoman {
+            height: 180px;
+            width: 100%;
+            float: left;
+            /* background-color: black; */
+        }
+
+        .dzs {
+            width: 100%;
+            height: 70px;
+            float: left;
+            margin-top: 15px;
+        }
+
+        .dzs img {
+            float: left;
+        }
+
+        .dzs-mz {
+            float: left;
+            width: 329.5px;
+            height: 25px;
+            /* background-color: aliceblue; */
+            font-size: 26px;
+            font-weight: bold;
+
+        }
+
+        .dzs-mz:hover {
+            color: brown;
+        }
+
+        .dzs-jj {
+            float: left;
+            width: 324.5px;
+            height: 45px;
+            /* background-color: aquamarine; */
+            line-height: 22.5px;
+            font-size: 14px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-left: 5px;
+            color: rgb(202, 167, 124);
+        }
+
+
+
+        .centerb-b {
+            width: 399.5px;
+            height: 1200px;
+            float: left;
+            background-color: rgb(223, 217, 203);
+        }
+
+        .gxdj {
+            width: 400px;
+            height: 25px;
+            float: left;
+            margin-top: 30px;
+            /* background-color: #ccc; */
+        }
+
+        .gxdj-wz {
+            height: 25px;
+            width: 150px;
+            float: left;
+            /* background-color: rgb(255, 255, 255); */
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 25px;
+            border-left: 5px solid brown;
+        }
+
+        .gxdj-gd {
+            height: 30px;
+            width: 50px;
+            float: left;
+            /* background-color: aliceblue; */
+            font-size: 15px;
+            line-height: 30px;
+            color: rgb(192, 157, 88);
+            margin-left: 195px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .gxdj-gd:hover {
+            color: brown;
+            text-decoration: underline;
+        }
+
+        .main {
+            width: 400px;
+            height: 175px;
+            float: left;
+            position: relative;
+            margin-top: 70px;
+            /* transform: translate(-50%, -50%); */
+            /* border: 1px solid gray; */
+            /* color: white; */
+            /* background-color: antiquewhite; */
+        }
+
+        .main div {
+            width: 400px;
+            height: 200px;
+            display: none;
+        }
+
+        /* 选项的点 */
+        input[type="radio"] {
+            display: none;
+        }
+
+
+
+        #l1:hover {
+            background-image: url(../imagea/jinga.png);
+        }
+
+        #l2:hover {
+            background-image: url(../imagea/shia.png);
+        }
+
+        #l3:hover {
+            background-image: url(../imagea/zia.png);
+        }
+
+        #l4:hover {
+            background-image: url(../imagea/jia.png);
+        }
+
+        /* 切换标签 */
+        label {
+            position: absolute;
+            width: 50px;
+            font-size: 18px;
+            top: -50px;
+            line-height: 50px;
+            text-align: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            /* text-shadow: 2px 2px 1px black; */
+            color: rgb(122, 122, 122);
+            height: 50px;
+            /* background-color: #838181; */
+
+        }
+
+
+
+        #l1 {
+            left: 40px;
+            /* background: #eb7d55; */
+            background-image: url(../imagea/jing.png);
+        }
+
+        #l2 {
+            left: 130px;
+            /* background: #EE5A24; */
+            background-image: url(../imagea/shi.png)
+        }
+
+        #l3 {
+            left: 210px;
+            /* background: #EE5A24; */
+            background-image: url(../imagea/zi.png)
+        }
+
+        #l4 {
+            left: 300px;
+            /* background: #EE5A24; */
+            background-image: url(../imagea/ji.png)
+        }
+
+        #r1:checked~#ubtntu,
+        #r2:checked~#opensuse,
+        #r3:checked~#centos,
+        #r4:checked~#fedora {
+            /* 网格布局 */
+            display: block;
+        }
+
+
+
+        .cz {
+            width: 400px;
+            height: 250px;
+            /* background-color: antiquewhite; */
+            float: left;
+            position: absolute;
+            display: block !important;
+
+        }
+
+        .cz ul {
+            float: left;
+            list-style: none;
+            margin-left: 10px;
+            width: 75px;
+            /* background-color: #838181; */
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .cz ul:nth-child(1) {
+            margin-left: 30px;
+        }
+
+        .cz ul li {
+            height: 35px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .cz ul li:hover {
+            color: brown;
+            text-decoration: underline;
+        }
+
+        .ks {
+            width: 400px;
+            height: 320px;
+            float: left;
+            /* background-color: brown; */
+            margin-top: 20px;
+
+        }
+
+        .rjk {
+            width: 100%;
+            height: 40px;
+            float: left;
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .rjk:nth-child(1) {
+            margin-top: 0px;
+        }
+
+        .rj {
+            width: 100px;
+            height: 40px;
+            float: left;
+            /* background-color: black; */
+            margin-left: 10px;
+            border: 1px solid rgb(170, 168, 168);
+            text-align: center;
+            line-height: 40px;
+            font-size: 24px;
+            /* font-weight: bold; */
+
+            /* font-family: Arial, Helvetica, sans-serif; */
+        }
+
+        .rj:hover {
+            background-color: brown;
+            color: aliceblue;
+        }
+
+        .rjk .rj:nth-child(1) {
+            margin-left: 0px;
+        }
+
+        .ddj {
+            width: 100%;
+            height: 126px;
+            float: left;
+            margin-top: 15px;
+        }
+
+        .ddj img {
+            float: left;
+            margin-left: 30px;
+        }
+
+        .ddj-dz {
+            width: 250px;
+            height: 30px;
+            float: left;
+            /* background-color: aliceblue; */
+            line-height: 30px;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .ddj-dz:hover {
+            color: brown;
+        }
+
+        .ddj-xz {
+            width: 250px;
+            height: 86px;
+            float: left;
+            /* background-color: aliceblue; */
+            line-height: 22px;
+            font-size: 22px;
+            margin-left: 5px;
+            color: rgb(184, 136, 69);
+        }
+
+        .dlpx {
+            width: 90%;
+            height: 294px;
+            float: left;
+            /* background-color: black; */
+            margin-top: 15px;
+            border-top: 1px solid rgb(190, 189, 189);
+            margin-left: 5%;
+        }
+
+        .dlpx ul {
+            list-style: none;
+            margin-top: 12px;
+            margin-left: 5px;
+            float: left;
+        }
+
+        .dlpx ul li {
+            font-size: 24px;
+            height: 40px;
+        }
+
+        .dlpx ul li:hover {
+            color: brown;
+            text-decoration: underline;
+
+        }
+
+        .centerb-tp {
+            width: 1190px;
+            height: 110px;
+            float: left;
+            background-color: black;
+            margin-top: 90px;
+            margin-left: 95px;
+        }
+
+        /* 总体 */
+        .ct-jq {
+            width: 420px;
+            height: 335px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            position: relative;
+            /* border: 1px solid rgb(53, 52, 53); */
+            background-color: rgb(216, 209, 197);
+            margin-top: 44px;
+        }
+
+        /* 隐藏input，主要利用“:checked”选择器，达到切换目的 */
+        .ct-jq-input {
+            display: none;
+
+        }
+
+        /* 给选项卡统一背景色 */
+        .ct-jq-item {
+            flex: 1;
+            height: 40px;
+            text-align: center;
+            background-color: rgb(216, 209, 197);
+
+        }
+
+        /* 选项卡label撑高 */
+        .ct-jq-tit {
+            display: block;
+            width: 210px;
+            height: 40px;
+            line-height: 40px;
+            cursor: pointer;
+            font-size: 30px;
+            background-color: rgb(216, 209, 197);
+            border-radius: 0px;
+            color: black;
+            margin-top: 6px;
+        }
+
+        /* 
+         * hover高亮，选中高亮。
+         * “+”代表下一个，div+p：选择所有紧接着<div>元素之后的<p>元素。
+         * “:checked”代表选择每个选中的输入元素
+		 */
+        /* .ct-jq-tit:hover, */
+        .ct-jq-input:checked+.ct-jq-tit {
+            border-bottom: 4px solid brown;
+            color: brown;
+            /* height: 40px; */
+            font-weight: bold;
+            background-color: rgb(216, 209, 197);
+        }
+
+        /* .ct-jq-input为选项 ct-jq-content为内容 */
+        /*选项与内容绑定效果由label标签中for属性绑定input标签id实现  */
+        .ct-jq-content {
+            display: none;
+            position: absolute;
+            /* top: 60px; */
+            left: 0;
+            text-align: left;
+            /* text-indent: 2em; */
+            /* padding: 10px; */
+            box-sizing: border-box;
+        }
+
+        /* 内容区域默认全隐藏，相对于ul定位*/
+
+        .ct-jq-input:checked~.ct-jq-content {
+            display: block;
+        }
+
+
+        /* 
+         * 选中项内容区域显示
+         * ~：表示某元素之后的每一个某元素。p~ul：选择p元素之后的每一个ul元素
+         */
+        .ctjr {
+            width: 420px;
+            height: 340px;
+            position: absolute;
+            background-color: rgb(230, 224, 210);
+            float: left;
+
+        }
+
+        .ctjr ul {
+            float: left;
+            margin-top: 127px;
+            margin-left: 50px;
+        }
+
+        .ctjr ul:nth-child(1) {
+            margin-left: 37px;
+        }
+
+        .ctjr ul li {
+            list-style: none;
+            height: 35px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .ctjra {
+            width: 420px;
+            height: 340px;
+            position: absolute;
+            background-color: rgb(230, 224, 210);
+            float: left;
+
+        }
+
+        .ctjra ul {
+            float: left;
+            margin-top: 127px;
+            margin-left: 60px;
+        }
+
+        .ctjra ul li {
+            list-style: none;
+            height: 35px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .ctjr ul li:hover,
+        .ctjra ul li:hover {
+            color: brown;
+            text-decoration: underline;
+        }
+
+        .sxwh {
+            width: 100%;
+            height: 190px;
+            float: left;
+            /* background-color: black; */
+            margin-top: 20px;
+        }
+
+        .sxtk {
+            margin-left: 25px;
+        }
+
+        .sxt {
+            width: 63px;
+            height: 52px;
+            float: left;
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .sxt img {
+            float: left;
+        }
+
+
+
+        .sxtk:nth-child(1) .sxt:nth-child(1):hover {
+            background-image: url(../imagea/sxact_icon01.jpg) !important;
+
+        }
+
+        .sxtk:nth-child(1) .sxt:nth-child(2):hover {
+            background-image: url(../imagea/sxact_icon02.jpg) !important;
+
+        }
+
+        .sxtk:nth-child(1) .sxt:nth-child(3):hover {
+            background-image: url(../imagea/sxact_icon03.jpg) !important;
+
+        }
+
+        .sxtk:nth-child(1) .sxt:nth-child(4):hover {
+            background-image: url(../imagea/sxact_icon04.jpg) !important;
+
+        }
+
+        .sxtk:nth-child(2) .sxt:nth-child(1):hover {
+            background-image: url(../imagea/sxact_icon05.jpg) !important;
+
+        }
+
+        .sxtk:nth-child(2) .sxt:nth-child(2):hover {
+            background-image: url(../imagea/sxact_icon06.jpg) !important;
+
+        }
+
+        .sxtk:nth-child(2) .sxt:nth-child(3):hover {
+            background-image: url(../imagea/sxact_icon07.jpg) !important;
+
+        }
+
+        .sxtk:nth-child(2) .sxt:nth-child(4):hover {
+            background-image: url(../imagea/sxact_icon08.jpg) !important;
+
+        }
+
+        .sxtk:nth-child(3) .sxt:nth-child(1):hover {
+            background-image: url(../imagea/sxact_icon09.jpg) !important;
+
+        }
+
+        .sxtk:nth-child(3) .sxt:nth-child(2):hover {
+            background-image: url(../imagea/sxact_icon10.jpg) !important;
+
+        }
+
+        .sxtk:nth-child(3) .sxt:nth-child(3):hover {
+            background-image: url(../imagea/sxact_icon11.jpg) !important;
+
+        }
+
+        .sxtk:nth-child(3) .sxt:nth-child(4):hover {
+            background-image: url(../imagea/sxact_icon12.jpg) !important;
+
+        }
+
+        .feiyi {
+            width: 1190px;
+            height: 110px;
+            float: left;
+            margin-left: 350px;
+            margin-top: -40px;
+        }
+
+        .footer {
+            width: 100%;
+            height: 250px;
+            float: left;
+            background-color: rgb(57, 43, 32);
+            overflow-x: hidden;
+            margin-top: 30px;
+        }
+
+        .footera {
+            width: 100%;
+            height: 43px;
+            float: left;
+            background-color: rgb(57, 43, 32);
+            border-bottom: 1px solid rgb(124, 124, 124);
+        }
+
+        .footera ul {
+            margin-left: 240px;
+            width: 100%;
+            float: left;
+        }
+
+        .footera ul li {
+            float: left;
+            list-style: none;
+            line-height: 43px;
+            font-size: 16px;
+            color: antiquewhite;
+            margin-left: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .footera ul li:hover {
+            color: brown;
+        }
+
+        .footer-wz {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            height: 40px;
+            line-height: 40px;
+            margin-left: 260px;
+            color: #b9a189;
+            width: 1300px;
+            /* background-color: black; */
+            float: left;
+        }
+
+        .footer div:nth-child(2) {
+            margin-top: 20px;
+        }
+
+        .dtb {
+            position: absolute;
+            width: 62px;
+            height: 62px;
+            float: left;
+            /* background-color: black; */
+            margin-left: 1400px;
+            margin-top: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-top"></div>
+    <div class="header ">
+        <ul>
+            <li>
+                <a href="../html/culture.html">古典文化</a>
+            </li>
+            <li>
+                <a href="../html/news.html">新闻中心</a>
+            </li>
+            <li>
+                <a href="../html/Movies.html">现代影视</a>
+            </li>
+            <li><a href="../html/national.html">国潮当立</a></li>
+
+        </ul>
+        <div class="sy"><a href="../html/homepage.html">首页</a></div>
+    </div>
+    <div class="headera Myfont">
+        <ul>
+            <li>首页</li>
+            <li>国学</li>
+            <li>民俗</li>
+            <li>哲学</li>
+            <li>汉语</li>
+            <li>文学</li>
+            <li>艺术</li>
+            <li>体育</li>
+            <li>历法</li>
+            <li>节日</li>
+            <li>节气</li>
+            <li>国学典籍</li>
+            <li>国学语录</li>
+            <li>非遗</li>
+            <li>专题</li>
+        </ul>
+    </div>
+    <div class="center">
+        <div class="centera">
+            <div class="centera-a">
+                <div class="centera-a-a">
+                    <div class="centera-a-a-wz">12月21日</div>
+                    <div class="centera-a-a-wza">星期二 东月十八 辛丑牛年 庚子月 葵卯日</div>
+                    <div class="centera-a-a-k">
+                        <div class="wzaa">
+                            <div class="ji_yi"><img src="../imagea/login_yi.png" alt=""></div>动土,修造,装修,拆卸,出行
+                        </div>
+                        <div class="wzaa">
+                            <div class="ji_yi"><img src="../imagea/login_ji.png" alt=""></div>祈福,安葬
+                        </div>
+                    </div>
+                    <div class="centera-a-a-jq">
+                        <div class="hda">
+                            <div class="jq">冬至</div>
+                            <div class="jq">节日</div>
+                            <div class="jq">习俗</div>
+                        </div>
+                        <div class="hda-tp"><img src="../imagea/b.jpg" alt=""></div>
+                    </div>
+                </div>
+                <img src="../imagea/first.jpg" alt="">
+            </div>
+            <div class="centera-b">
+                <div class="centera-b-a">读者服务</div>
+                <div class="centera-b-b">
+                    <div class="centera-b-b-a">
+                        <div class="qd"><i class="iconfont icon-qiandao"></i></div>
+                        <div class="dwz">今日签到!</div>
+                        <div class="xwz">签到送积分，积分换豪礼!</div>
+                    </div>
+                </div>
+                <div class="centera-b-b">
+                    <div class="centera-b-b-a">
+                        <div class="qd"><i class="iconfont icon-yuedu"></i></div>
+                        <div class="dwz">亲子阅读!</div>
+                        <div class="xwz">和孩子一起共读一本好书!</div>
+                    </div>
+                </div>
+                <div class="centera-b-b">
+                    <div class="centera-b-b-a">
+                        <div class="qd"><i class="iconfont icon-tushu"></i></div>
+                        <div class="dwz">仁、义、礼、智、信</div>
+                        <div class="xwz">文化传承2500年,有道理的。</div>
+                        <div class="bg">
+                            <div class="bg-a">
+                                <ul>
+                                    <li>
+                                        <i class="iconfont icon-leaf-01"></i>
+                                        <div class="xxwz">启蒙</div>
+                                    </li>
+                                    <li><i class="iconfont icon-shu">
+                                        </i>
+                                        <div class="xxwz">经书</div>
+                                    </li>
+                                    <li><i class="iconfont icon-touxiang">
+                                        </i>
+                                        <div class="xxwz">诸子</div>
+                                    </li>
+                                    <li><i class="iconfont icon-touxiang1">
+                                        </i>
+                                        <div class="xxwz">百家</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bg-a">
+                                <ul>
+                                    <li>
+                                        <i class="iconfont icon-wp-sj-2"></i>
+                                        <div class="xxwz">古籍</div>
+                                    </li>
+                                    <li><i class="iconfont icon-juan">
+                                        </i>
+                                        <div class="xxwz">诗词</div>
+                                    </li>
+                                    <li><i class="iconfont icon-guohua">
+                                        </i>
+                                        <div class="xxwz">书画</div>
+                                    </li>
+                                    <li><i class="iconfont icon-lingdaitie3">
+                                        </i>
+                                        <div class="xxwz">礼仪</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="centerb">
+            <div class="tab">
+                <div class="tab-a">
+                    <div class="tab-a-a"><i class="iconfont icon-shuben" style="font-size:29px; color:#baa28a"></i>
+                    </div>
+                    国学·哲学
+                </div>
+                <div class="tab-b">
+                    <ul>
+                        <li>经部 |</li>
+                        <li>吏部 |</li>
+                        <li>子部 |</li>
+                        <li>级部 |</li>
+                        <li>儒学 |</li>
+                        <li>道学 |</li>
+                        <li>墨学 |</li>
+                        <li>法学 </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="centerb-a">
+                <div class="centerb-a-a">
+                    <img src="../imagea/ruijiawh.jpg" alt="">
+                    <div class="centerb-a-a-a">
+                        <div class="centerb-a-a-a-a">
+                            <div class="bt">京韵大鼓</div>
+                            <div class="bt-wz">与刘宝全同时并起的艺人有张小轩、白云鹏。此外，京韵大鼓具有半说半唱的特色。由河北省南部流行<span>[详细...]</span></div>
+                        </div>
+                        <div class="centerb-a-a-a-a">
+                            <div class="bt" style="color: rgb(91, 91, 255);">少年儿童都应该读一读这10本国学启蒙书</div>
+                            <div class="bt-wz">什么是国学？国学该怎么学？可能很多家长都有这样的疑问，建议从汉程网推荐整理的10本国学启蒙书<span>[详细...]</span></div>
+                        </div>
+                        <div class="centerb-a-a-a-a">
+                            <div class="bt" style="color: rgb(248, 163, 35);">一个专题让你读懂诸子百家</div>
+                            <div class="bt-wz">先秦诸子百家争鸣，创造了中国灿烂的文化艺术，各种思想学术流派的成就，与同期古希腊文明相辉映<span>[详细...]</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="centerb-a-b">
+                    <!-- 国学启蒙的大框 -->
+                    <div class="centerb-a-b-a">
+                        <div class="gxqm">
+                            <div class="gxqm-wz">国学启蒙</div>
+                            <div class="gxqm-gd">更多></div>
+                        </div>
+                        <div class="threebook">
+                            <ul>
+                                <li><img src="../imagea/guoxue_dizigui.jpg" alt=""></li>
+                                <li><img src="../imagea/guoxue_lunyu.jpg" alt=""></li>
+                                <li><img src="../imagea/guoxue_sanzijing.jpg" alt=""></li>
+                            </ul>
+                        </div>
+                        <div class="centerb-a-b-a-a">
+                            <span>[启蒙篇]</span>
+                            <div>三字经</div>
+                            <div>百家姓</div>
+                            <div>千字文</div>
+                        </div>
+                        <div class="centerb-a-b-a-a">
+                            <span>[训诫篇]</span>
+                            <div>弟子规</div>
+                            <div>论语</div>
+                            <div>朱子家训</div>
+                        </div>
+                        <div class="centerb-a-b-a-a">
+                            <span>[诗歌篇]</span>
+                            <div>唐诗三百首</div>
+                            <div>宋词三百首</div>
+
+                        </div>
+                        <div class="centerb-a-b-a-a">
+                            <span>[典故篇]</span>
+                            <div>幼学琼林</div>
+                            <div>曾广贤文</div>
+
+                        </div>
+                    </div>
+                    <div class="centerb-a-b-b">
+                        <div class="c-tp"><img src="../imagea/guoxueyulu.png" alt="">
+                            <div class="c-tp-wz">众恶之,必察焉;众好之,必察焉。仁者必有勇,勇者不必有仁。</div>
+                        </div>
+                        <div class="ylx">
+                            <ul>
+                                <li>没有富人的思维，再努力也是穷人</li>
+                                <li>中年以后，你愿意过低配生活吗？</li>
+                                <li>探秘真假大墓——揭开汉文帝的“霸陵之迷”</li>
+                                <li>学生和家长的心情激动且复杂？</li>
+                                <li>聪明的人从来不说这7句话</li>
+                                <li>如何用一句话来概括儒家文化？</li>
+                                <li>儒家的“中庸”之道是否适用于当代</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="centerb-a-c">
+                    <div class="centerb-a-b-a">
+                        <div class="gxqm">
+                            <div class="gxqm-wz">国学人物</div>
+                            <div class="gxqm-gd">更多></div>
+                        </div>
+                        <div class="twoman">
+                            <div class="dzs"><img src="../imagea/dongzhongshu.jpg" alt="">
+                                <div class="dzs-mz">董仲舒</div>
+                                <div class="dzs-jj">提出"罢黜百家,独尊儒术",使儒学发扬光大,提出了天人感应、三纲五常等重要儒家理论</div>
+                            </div>
+                            <div class="dzs">
+                                <img src="../imagea/wangyangming.jpg" alt="">
+                                <div class="dzs-mz">王明阳</div>
+                                <div class="dzs-jj">王明阳有多牛?除了孔子敢称"圣人",他是第二位被称为"圣人"的思想家</div>
+                            </div>
+                        </div>
+                        <div class="centerb-a-b-a-a">
+                            <span>[老子]</span>
+                            <div>道家祖师，世界百位历史名人之一</div>
+
+                        </div>
+                        <div class="centerb-a-b-a-a">
+                            <span>[鬼谷子]</span>
+                            <div>极具神秘色彩的人物</div>
+
+                        </div>
+                        <div class="centerb-a-b-a-a">
+                            <span>[墨子]</span>
+                            <div>“天下之言，不归杨，则归墨”</div>
+
+
+                        </div>
+                        <div class="centerb-a-b-a-a">
+                            <span>[孙子]</span>
+                            <div>《孙子兵法》世界兵法排名第一</div>
+
+
+                        </div>
+                    </div>
+                    <div class="centerb-a-b-b">
+                        <div class="c-tp"><img src="../imagea/guoxueyulu.png" alt="">
+                            <div class="c-tp-wz">合抱之木,生于毫末;九层之台,起累于土;千里之行,始于足下。</div>
+                        </div>
+                        <div class="ylx">
+                            <ul>
+                                <li>“慎独”是儒家修养的人生至境</li>
+                                <li>老子的思想保守，真的不求进取吗？</li>
+                                <li>浅谈孟子仁政思想内容</li>
+                                <li>道家思想是如何起源和发展？</li>
+                                <li>孔子思想的局限性及负面影响</li>
+                                <li>你知道道德经里道和德意思吗？</li>
+                                <li>王阳明的“格物致知“知道什么意思吗？</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="centerb-b">
+                <div class="gxdj">
+                    <div class="gxdj-wz">国学典籍</div>
+                    <div class="gxdj-gd">更多></div>
+
+                </div>
+                <div class="main">
+                    <input type="radio" name="check" class="tab-input" id="r1" checked>
+                    <label for="r1" id="l1" class="tab-tit"></label>
+                    <div id="ubtntu">
+                        <div class="cz">
+                            <ul>
+                                <li>孟子</li>
+                                <li>礼仪</li>
+                                <li>周礼</li>
+                                <li>春秋...</li>
+                                <li>尔雅...</li>
+                            </ul>
+                            <ul>
+                                <li>仪礼</li>
+                                <li>诗经</li>
+                                <li>尔雅</li>
+                                <li>仪礼...</li>
+                                <li>孝经...</li>
+                            </ul>
+                            <ul>
+                                <li>周礼</li>
+                                <li>周易</li>
+                                <li>春秋...</li>
+                                <li>孟子...</li>
+                                <li>春秋...</li>
+                            </ul>
+                            <ul>
+                                <li>礼记</li>
+                                <li>孝经</li>
+                                <li>春秋...</li>
+                                <li>论语...</li>
+                                <li>孟子...</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <input type="radio" name="check" class="tab-input" id="r2">
+                    <label for="r2" id="l2" class="tab-tit"></label>
+                    <div id="opensuse">
+                        <div class="cz">
+                            <ul>
+                                <li>三家...</li>
+                                <li>三国...</li>
+                                <li>梁书</li>
+                                <li>周书</li>
+                                <li>旧唐书</li>
+                            </ul>
+                            <ul>
+                                <li>汉书</li>
+                                <li>晋书</li>
+                                <li>陈书</li>
+                                <li>北史</li>
+                                <li>新唐书</li>
+                            </ul>
+                            <ul>
+                                <li>后汉...</li>
+                                <li>宋书</li>
+                                <li>魏书</li>
+                                <li>南史</li>
+                                <li>旧五...</li>
+                            </ul>
+                            <ul>
+                                <li>后汉书</li>
+                                <li>南齐书</li>
+                                <li>北齐书</li>
+                                <li>隋书</li>
+                                <li>新五...</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <input type="radio" name="check" class="tab-input" id="r3">
+                    <label for="r3" id="l3" class="tab-tit"></label>
+                    <div id="centos">
+                        <div class="cz">
+                            <ul>
+                                <li>明夷...</li>
+                                <li>二十...</li>
+                                <li>盐铁论</li>
+                                <li>张子...</li>
+                                <li>西铭</li>
+                            </ul>
+                            <ul>
+                                <li>小学诗</li>
+                                <li>传习录</li>
+                                <li>朱子...</li>
+                                <li>训蒙...</li>
+                                <li>新序</li>
+                            </ul>
+                            <ul>
+                                <li>家范...</li>
+                                <li>南询录</li>
+                                <li>小儿语</li>
+                                <li>说苑</li>
+                                <li>名贤集</li>
+                            </ul>
+                            <ul>
+                                <li>潜夫...</li>
+                                <li>鉴略...</li>
+                                <li>申鉴</li>
+                                <li>声律...</li>
+                                <li>典论</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <input type="radio" name="check" class="tab-input" id="r4">
+                    <label for="r4" id="l4" class="tab-tit"></label>
+                    <div id="fedora">
+                        <div class="cz">
+                            <ul>
+                                <li>唐文...</li>
+                                <li>敦煌...</li>
+                                <li>先唐文</li>
+                                <li>全后...</li>
+                                <li>薛涛...</li>
+                            </ul>
+                            <ul>
+                                <li>全齐文</li>
+                                <li>全唐文</li>
+                                <li>全三...</li>
+                                <li>唐诗...</li>
+                                <li>全北...</li>
+                            </ul>
+                            <ul>
+                                <li>唐文...</li>
+                                <li>全晋文</li>
+                                <li>宋诗...</li>
+                                <li>全后...</li>
+                                <li>全秦文</li>
+                            </ul>
+                            <ul>
+                                <li>全宋文</li>
+                                <li>千家诗</li>
+                                <li>全隋文</li>
+                                <li>全汉文</li>
+                                <li>箧中集</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="gxdj">
+                    <div class="gxdj-wz">哲学流派</div>
+                    <div class="gxdj-gd">更多></div>
+                </div>
+                <div class="ks">
+                    <div class="rjk">
+                        <div class="rj">儒家</div>
+                        <div class="rj">道家</div>
+                        <div class="rj">墨家</div>
+                    </div>
+                    <div class="rjk">
+                        <div class="rj">法家</div>
+                        <div class="rj">兵家</div>
+                        <div class="rj">名家</div>
+                    </div>
+                    <div class="rjk">
+                        <div class="rj">农家</div>
+                        <div class="rj">杂家</div>
+                        <div class="rj">纵横家</div>
+                    </div>
+                    <div class="rjk">
+                        <div class="rj">阴阳家</div>
+                        <div class="rj">小说家</div>
+                        <div class="rj">经家</div>
+                    </div>
+                    <div class="rjk">
+                        <div class="rj">玄学</div>
+                        <div class="rj">佛学</div>
+                        <div class="rj">理学</div>
+                    </div>
+                    <div class="rjk">
+                        <div class="rj">心学</div>
+                    </div>
+                </div>
+                <div class="gxdj">
+                    <div class="gxdj-wz">哲学典籍</div>
+                    <div class="gxdj-gd">更多></div>
+                </div>
+                <div class="ddj"><img src="../imagea/guoxue_daodejinga.jpg" alt="">
+                    <div class="ddj-dz">《道德经》</div>
+                    <div class="ddj-xz">《道德经》又称《老子》，是中国古代先秦诸子分家前的一部著作，为其时诸子所共仰，传说...</div>
+                </div>
+                <div class="dlpx">
+                    <ul>
+                        <li>[儒家]论语</li>
+                        <li>[纵横家]鬼谷子</li>
+                        <li>[儒家]大学</li>
+                        <li>[儒家]梁谷春秋传</li>
+                        <li>[法家]管子</li>
+                        <li>[杂家]淮南子</li>
+                        <li>[兵家]六韬</li>
+                    </ul>
+                    <ul>
+                        <li>[兵家]孙子兵法</li>
+                        <li>[儒家]春秋</li>
+                        <li>[儒家]尔雅</li>
+                        <li>[名家]公孙龙子</li>
+                        <li>[儒家]公羊传</li>
+                        <li>[儒家]礼记</li>
+                        <li>[杂家]吕氏春秋</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="centerb-tp">
+            <img src="../imagea/dianji1190.jpg" alt="">
+        </div>
+        <div class="centerb">
+            <div class="tab">
+                <div class="tab-a">
+                    <div class="tab-a-a"><i class="iconfont icon-minsuwenhua"
+                            style="font-size:26px;color: #baa28a;"></i></div>
+                    民俗·历法
+                </div>
+                <div class="tab-b">
+                    <ul>
+                        <li>节日 |</li>
+                        <li>习俗 |</li>
+                        <li>民族 |</li>
+                        <li>饮食 |</li>
+                        <li>服饰 |</li>
+                        <li>建筑 |</li>
+                        <li>工艺 |</li>
+                        <li>礼仪</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="centerb-a">
+                <div class="centerb-a-a">
+                    <img src="../imagea/jieqi.jpg" alt="">
+                    <div class="centerb-a-a-a">
+                        <div class="centerb-a-a-a-a">
+                            <div class="bt">冬至祭祖吃馄饨</div>
+                            <div class="bt-wz">冬至这天，许多地区家家户户都要吃馄饨，俗以为冬至吃了馄饨，冬天不冻耳朵，这当然只是一种牵强附<span>[详细...]</span></div>
+                        </div>
+                        <div class="centerb-a-a-a-a">
+                            <div class="bt" style="color: rgb(91, 91, 255);">冬至吃狗肉,养好身体第一位</div>
+                            <div class="bt-wz">故此，中医历来认为狗肉是一味良好的中药，有补肾、益精、温补、壮阳等功用。现代医学研究证实，狗<span>[详细...]</span></div>
+                        </div>
+                        <div class="centerb-a-a-a-a">
+                            <div class="bt" style="color: rgb(248, 163, 35);">冬至节气的由来</div>
+                            <div class="bt-wz">2016年的冬至是12月21日。也就是说，人们开始过冬至节是为了庆祝新的一年的到来。冬至又被<span>[详细...]</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="centerb-a-b">
+                    <!-- 国学启蒙的大框 -->
+                    <div class="centerb-a-b-a">
+                        <ul class="ct-jq">
+                            <li class="ct-jq-item">
+                                <!-- 默认第一项选中，有checked -->
+                                <input type="radio" name="check" id="active1" class="ct-jq-input">
+                                <!-- for属性绑定input -->
+                                <label for="active1" class="ct-jq-tit">传统节日</label>
+                                <div class="ct-jq-content">
+                                    <div class="ctjr"
+                                        style="background-image: url(../imagea/hP_jieri_bg.png);background-repeat: no-repeat;">
+                                        <ul>
+                                            <li>春节</li>
+                                            <li>端午节</li>
+                                            <li>重阳节</li>
+                                            <li>元旦</li>
+                                            <li>植树节</li>
+                                        </ul>
+                                        <ul>
+                                            <li>元宵节</li>
+                                            <li>七夕节</li>
+                                            <li>国庆节</li>
+                                            <li>妇女节</li>
+                                            <li>建党节</li>
+                                        </ul>
+                                        <ul>
+                                            <li>龙抬头</li>
+                                            <li>中元节</li>
+                                            <li>腊八节</li>
+                                            <li>教师节</li>
+                                            <li>儿童节</li>
+                                        </ul>
+                                        <ul>
+                                            <li>清明节</li>
+                                            <li>中秋节</li>
+                                            <li>除夕</li>
+                                            <li>劳动节</li>
+                                            <li>母亲节</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="ct-jq-item">
+                                <input type="radio" name="check" id="active2" class="ct-jq-input">
+                                <label for="active2" class="ct-jq-tit">二十四气节</label>
+                                <div class="ct-jq-content">
+                                    <div class="ctjra"
+                                        style="background-image: url(../imagea/hP_jieqi_bg.png);background-repeat: no-repeat;">
+                                        <ul>
+                                            <li>立春</li>
+                                            <li>清明</li>
+                                            <li>芒种</li>
+                                            <li>立秋</li>
+                                            <li>寒露</li>
+                                            <li>大雪</li>
+                                        </ul>
+                                        <ul>
+                                            <li>雨水</li>
+                                            <li>谷雨</li>
+                                            <li>夏至</li>
+                                            <li>处暑</li>
+                                            <li>霜降</li>
+                                            <li>冬至</li>
+                                        </ul>
+                                        <ul>
+                                            <li>惊蛰</li>
+                                            <li>立夏</li>
+                                            <li>小暑</li>
+                                            <li>白露</li>
+                                            <li>立冬</li>
+                                            <li>小寒</li>
+                                        </ul>
+                                        <ul>
+                                            <li>春分</li>
+                                            <li>小满</li>
+                                            <li>大暑</li>
+                                            <li>秋分</li>
+                                            <li>小雪</li>
+                                            <li>大寒</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="centerb-a-b-b">
+                        <div class="c-tp"><img src="../imagea/guoxueyulu.png" alt="">
+                            <div class="c-tp-wz">博学之，审问之，慎思之，明辨之，笃行之。</div>
+                        </div>
+                        <div class="ylx">
+                            <ul>
+                                <li>解读历史 颛顼历是什么</li>
+                                <li>什么是阴历你真的了解吗</li>
+                                <li>中国二十四节气和西方历法对比孰优孰劣</li>
+                                <li>胎菊，除了泡茶还可以这么用！</li>
+                                <li>中国历法，二十四节气。</li>
+                                <li>农历和阴历一样吗</li>
+                                <li>金秀盘瑶族的婚礼特点及流程</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="centerb-a-c">
+                    <div class="centerb-a-b-a">
+                        <div class="gxqm">
+                            <div class="gxqm-wz">非物质文化</div>
+                            <div class="gxqm-gd">更多></div>
+                        </div>
+                        <div class="twoman">
+                            <div class="dzs"><img src="../imagea/jjlh.jpg" alt="" style="max-width:90px">
+                                <div class="dzs-mz">井陉拉花</div>
+                                <div class="dzs-jj">
+                                    传统井陉拉花有其显著的艺术特色，以“拧肩”、“翻腕”、“扭臂”、“吸腿”、“撇脚”等动作为主...</div>
+                            </div>
+                            <div class="dzs">
+                                <img src="../imagea/lgys.jpg" alt="" style="max-width:90px">
+                                <div class="dzs-mz">锣鼓艺术</div>
+                                <div class="dzs-jj">汉沽飞镲、常山战鼓、太原锣鼓、泗泾十锦细锣鼓、大铜器、开封盘鼓、宜昌堂调、韩城行鼓...</div>
+                            </div>
+                        </div>
+                        <div class="centerb-a-b-a-a">
+                            <span>[民间文学]</span>
+                            <div>有文是谓民,亦谓为坊间</div>
+
+                        </div>
+                        <div class="centerb-a-b-a-a">
+                            <span>[曲艺]</span>
+                            <div>此曲只应天上有,人间哪得几回闻</div>
+
+                        </div>
+                        <div class="centerb-a-b-a-a">
+                            <span>[传统技艺]</span>
+                            <div>传统技艺层出却难存</div>
+
+
+                        </div>
+                        <div class="centerb-a-b-a-a">
+                            <span>[民俗]</span>
+                            <div>约定俗成,从古至今</div>
+
+
+                        </div>
+                    </div>
+                    <div class="centerb-a-b-b">
+                        <div class="c-tp"><img src="../imagea/guoxueyulu.png" alt="">
+                            <div class="c-tp-wz"> 天行健，君子以自强不息；地势坤，君子以厚德载物。</div>
+                        </div>
+                        <div class="ylx">
+                            <ul>
+                                <li>中国夏代历法成就有哪些</li>
+                                <li>冬至时节有哪些含义？</li>
+                                <li>太初历的具体内容是什么</li>
+                                <li>冬至时节最忌讳的三件事？</li>
+                                <li>“人穷不思三人，没钱不贪三欲”</li>
+                                <li>香菇炖鸡腿做法简单还好吃下饭</li>
+                                <li>吃鸡蛋常见的误区</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="centerb-b" style="height:1000px">
+                <div class="gxdj">
+                    <div class="gxdj-wz">生肖文化</div>
+                    <div class="gxdj-gd">更多></div>
+                </div>
+                <div class="sxwh">
+                    <div class="sxtk">
+                        <div class="sxt" style="background-image: url(../imagea/sx_icon01.jpg);"></div>
+                        <div class="sxt" style="background-image: url(../imagea/sx_icon02.jpg);"></div>
+                        <div class="sxt" style="background-image: url(../imagea/sx_icon03.jpg);"></div>
+                        <div class="sxt" style="background-image: url(../imagea/sx_icon04.jpg);"></div>
+                    </div>
+                    <div class="sxtk">
+                        <div class="sxt" style="background-image: url(../imagea/sx_icon05.jpg);"></div>
+                        <div class="sxt" style="background-image: url(../imagea/sx_icon06.jpg);"></div>
+                        <div class="sxt" style="background-image: url(../imagea/sx_icon07.jpg);"></div>
+                        <div class="sxt" style="background-image: url(../imagea/sx_icon08.jpg);"></div>
+                    </div>
+                    <div class="sxtk">
+                        <div class="sxt" style="background-image: url(../imagea/sx_icon09.jpg);"></div>
+                        <div class="sxt" style="background-image: url(../imagea/sx_icon10.jpg);"></div>
+                        <div class="sxt" style="background-image: url(../imagea/sx_icon11.jpg);"></div>
+                        <div class="sxt" style="background-image: url(../imagea/sx_icon12.jpg);"></div>
+                    </div>
+                </div>
+                <div class="ylx" style="margin-left: 35px;">
+                    <ul>
+                        <li>草中一根绳，弯弯曲曲行...</li>
+                        <li>身穿皮袍黄又黄，呼啸一声百兽慌</li>
+                        <li>人困马乏 （打一生肖）</li>
+                        <li>得过且过 （打一生肖）</li>
+                        <li>下元 （打《赤壁赋》一句）</li>
+                        <li>羽未丰 （四字常言）</li>
+                        <li>两地联手，携力建厂 （日用品）</li>
+                    </ul>
+                </div>
+                <div class="gxdj">
+                    <div class="gxdj-wz">民俗典籍</div>
+                    <div class="gxdj-gd">更多></div>
+                </div>
+                <div class="ddj"><img src="../imagea/shuiwenjiezi.jpg" alt="">
+                    <div class="ddj-dz">《风俗通义校注》</div>
+                    <div class="ddj-xz">《风俗通义》，是一部内容非常丰富的学术著作，无论是内容还是见解，都有很高的学术价值。</div>
+                </div>
+                <div class="dlpx">
+                    <ul>
+                        <li>[风俗]无杂俎</li>
+                        <li>[饮食]茶经</li>
+                        <li>[茶艺]随园食单</li>
+                        <li>[工艺]瓶花谱</li>
+                        <li>[礼仪]厚黑学</li>
+                    </ul>
+                    <ul>
+                        <li>[风俗]葬书</li>
+                        <li>[饮食]酒经</li>
+                        <li>[饮食]十六汤品</li>
+                        <li>[礼仪]颜氏家训</li>
+                        <li>[历法]历算全书</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="feiyi"><img src="../imagea/feiyi1190.jpg" alt=""></div>
+    <div class="footer">
+        <div class="footera">
+            <ul>
+                <li>网站简介</li>
+                <li>练习方式</li>
+                <li>合作机会</li>
+                <li>知识产权</li>
+                <li>用户协议</li>
+                <li>隐私政策</li>
+                <li>反馈投诉</li>
+            </ul>
+        </div>
+        <div class="footer-wz">中华人民共和国增值电信业务许可证： 皖B2-20100068<i><img src="../imagea/beianwangan.png" alt=""></i> 皖公网安备
+            34019202000096号 备案号：皖B2-20100068-6</div>
+        <div class="footer-wz">Copyright © 2000 - 2021 Httpcn Inc, All rights reserved. 皖作登字-2020-F-00001120</div>
+        <div class="footer-wz">本站为免费公益性网站，旨在弘扬中国传统文化，如侵犯了您的权益，请联系我们妥善处理。</div>
+        <div class="footer-wz">热爱伟大祖国 ♥ 维护民族团结 ♥ 弘扬传统文化 ♥ 促进社会和谐</div>
+        <div class="dtb"><img src="../imagea/gsyyzz.png" alt=""></div>
+    </div>
+
+</body>
+<script>
+
+</script>
+
+</html>

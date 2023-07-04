@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/x-ico" href="../logoa.ico">
+    <style>
+        /* 总体 */
+        .main {
+            width: 300px;
+            height: 200px;
+            position: absolute;
+            left: 50%;
+            top: 45%;
+            transform: translate(-50%, -50%);
+            /* border: 1px solid gray; */
+            /* color: white; */
+        }
+
+        .main div {
+            width: 300px;
+            height: 200px;
+            display: none;
+        }
+
+        /* 选项的点 */
+        input[type="radio"] {
+            display: none;
+        }
+
+
+
+        #l1:hover {
+            background-image: url(../imagea/jinga.png);
+        }
+
+        #l2:hover {
+            background-image: url(../imagea/shia.png);
+        }
+
+        #l3:hover {
+            background-image: url(../imagea/zia.png);
+        }
+
+        #l4:hover {
+            background-image: url(../imagea/jia.png);
+        }
+
+        /* 切换标签 */
+        label {
+            position: absolute;
+            width: 50px;
+            font-size: 18px;
+            top: -50px;
+            line-height: 50px;
+            text-align: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            /* text-shadow: 2px 2px 1px black; */
+            color: rgb(122, 122, 122);
+            height: 50px;
+            /* background-color: #838181; */
+
+        }
+
+        #l1 {
+            left: 10px;
+            /* background: #eb7d55; */
+            background-image: url(../imagea/jing.png);
+        }
+
+        #l2 {
+            left: 85px;
+            /* background: #EE5A24; */
+            background-image: url(../imagea/shi.png)
+        }
+
+        #l3 {
+            left: 160px;
+            /* background: #EE5A24; */
+            background-image: url(../imagea/zi.png)
+        }
+
+        #l4 {
+            left: 235px;
+            /* background: #EE5A24; */
+            background-image: url(../imagea/ji.png)
+        }
+
+        #r1:checked~#ubtntu,
+        #r2:checked~#opensuse,
+        #r3:checked~#centos,
+        #r4:checked~#fedora {
+            /* 网格布局 */
+            display: block;
+        }
+
+        #ubtntu {
+            background: #969494;
+
+        }
+
+        .cz {
+            width: 300px;
+            height: 250px;
+            background-color: antiquewhite;
+            float: left;
+            position: absolute;
+            display: block !important;
+        }
+
+        .cz ul {
+            float: left;
+            list-style: none;
+            margin-left: -15px;
+        }
+
+        .cz ul li {
+            height: 32px;
+        }
+
+        .cz ul li:hover {
+            color: brown;
+            text-decoration: underline;
+        }
+
+        #opensuse {
+            background: #918f8f;
+
+        }
+
+        #centos {
+            background: #838181;
+
+        }
+
+        #fedora {
+            background: #8d8c8b;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center-b">
+        <div class="center-c-wz">车型探索</div>
+        <!-- 标签切换 -->
+        <div class="main">
+            <input type="radio" name="check" class="tab-input" id="r1" checked>
+            <label for="r1" id="l1" class="tab-tit"></label>
+            <div id="ubtntu">
+                <div class="cz">
+                    <ul>
+                        <li>孟子</li>
+                        <li>礼仪</li>
+                        <li>周礼</li>
+                        <li>春秋...</li>
+                        <li>尔雅...</li>
+                    </ul>
+                    <ul>
+                        <li>仪礼</li>
+                        <li>诗经</li>
+                        <li>尔雅</li>
+                        <li>仪礼...</li>
+                        <li>孝经...</li>
+                    </ul>
+                    <ul>
+                        <li>周礼</li>
+                        <li>周易</li>
+                        <li>春秋...</li>
+                        <li>孟子...</li>
+                        <li>春秋...</li>
+                    </ul>
+                    <ul>
+                        <li>礼记</li>
+                        <li>孝经</li>
+                        <li>春秋...</li>
+                        <li>论语...</li>
+                        <li>孟子...</li>
+                    </ul>
+                </div>
+            </div>
+            <input type="radio" name="check" class="tab-input" id="r2">
+            <label for="r2" id="l2" class="tab-tit"></label>
+            <div id="opensuse">
+                <div class="cz">
+                    <ul>
+                        <li>三家...</li>
+                        <li>三国...</li>
+                        <li>梁书</li>
+                        <li>周书</li>
+                        <li>旧唐书</li>
+                    </ul>
+                    <ul>
+                        <li>汉书</li>
+                        <li>晋书</li>
+                        <li>陈书</li>
+                        <li>北史</li>
+                        <li>新唐书</li>
+                    </ul>
+                    <ul>
+                        <li>后汉...</li>
+                        <li>宋书</li>
+                        <li>魏书</li>
+                        <li>南史</li>
+                        <li>旧五...</li>
+                    </ul>
+                    <ul>
+                        <li>后汉书</li>
+                        <li>南齐书</li>
+                        <li>北齐书</li>
+                        <li>隋书</li>
+                        <li>新五...</li>
+                    </ul>
+                </div>
+            </div>
+            <input type="radio" name="check" class="tab-input" id="r3">
+            <label for="r3" id="l3" class="tab-tit"></label>
+            <div id="centos">
+                <div class="cz">
+                    <ul>
+                        <li>明夷...</li>
+                        <li>二十...</li>
+                        <li>盐铁论</li>
+                        <li>张子...</li>
+                        <li>西铭</li>
+                    </ul>
+                    <ul>
+                        <li>小学诗</li>
+                        <li>传习录</li>
+                        <li>朱子...</li>
+                        <li>训蒙...</li>
+                        <li>新序</li>
+                    </ul>
+                    <ul>
+                        <li>家范...</li>
+                        <li>南询录</li>
+                        <li>小儿语</li>
+                        <li>说苑</li>
+                        <li>名贤集</li>
+                    </ul>
+                    <ul>
+                        <li>潜夫...</li>
+                        <li>鉴略...</li>
+                        <li>申鉴</li>
+                        <li>声律...</li>
+                        <li>典论</li>
+                    </ul>
+                </div>
+            </div>
+            <input type="radio" name="check" class="tab-input" id="r4">
+            <label for="r4" id="l4" class="tab-tit"></label>
+            <div id="fedora">
+                <div class="cz">
+                    <ul>
+                        <li>唐文...</li>
+                        <li>敦煌...</li>
+                        <li>先唐文</li>
+                        <li>全后...</li>
+                        <li>薛涛...</li>
+                    </ul>
+                    <ul>
+                        <li>全齐文</li>
+                        <li>全唐文</li>
+                        <li>全三...</li>
+                        <li>唐诗...</li>
+                        <li>全北...</li>
+                    </ul>
+                    <ul>
+                        <li>唐文...</li>
+                        <li>全晋文</li>
+                        <li>宋诗...</li>
+                        <li>全后...</li>
+                        <li>全秦文</li>
+                    </ul>
+                    <ul>
+                        <li>全宋文</li>
+                        <li>千家诗</li>
+                        <li>全隋文</li>
+                        <li>全汉文</li>
+                        <li>箧中集</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

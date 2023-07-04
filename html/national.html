@@ -1,0 +1,963 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-12-20 17:20:37
+ * @LastEditTime: 2022-04-24 08:24:50
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \常用\国风\html\homepage.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>国潮当立</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_3118193_ojlmdqn1u3j.css">
+    <link rel="stylesheet" href="../css/lba.css">
+    <link rel="stylesheet" href="../css/djsp.css">
+    <script src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/djsp.js"></script>
+    <script src="../js/lba.js"></script>
+    <link rel="icon" type="image/x-ico" href="../logoa.ico">
+    <script>
+        window.onload = function () {
+            // 轮播选项
+            const options = {
+                id: 'lb-1',              // 轮播盒ID
+                speed: 600,              // 轮播速度(ms)
+                delay: 3000,             // 轮播延迟(ms)
+                direction: 'left',       // 图片滑动方向
+                moniterKeyEvent: true,   // 是否监听键盘事件
+                moniterTouchEvent: true  // 是否监听屏幕滑动事件
+            }
+            const lb = new Lb(options);
+            lb.start();
+        }
+    </script>
+    <style>
+        @font-face {
+            font-family: 'myfont';
+            src: url('../css/fonts/江西拙楷2.0.ttf');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: myfont;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(254, 247, 233);
+        }
+
+        a:hover {
+            color: rgb(135, 13, 1);
+        }
+
+        body {
+            width: 1920px;
+            overflow-x: hidden;
+
+        }
+
+        ::-webkit-scrollbar {
+            width: 20px;
+            /*height: 4px;*/
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+            background: rgba(195, 39, 43, 1.0);
+        }
+
+        ::-webkit-scrollbar-track {
+            /* -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); */
+            /* border-radius: 10px; */
+            background: rgba(0, 0, 0, 1);
+
+        }
+
+        .header-top {
+            width: 1900px;
+            height: 100px;
+            float: left;
+        }
+
+        .header {
+            height: 100px;
+            width: 1900px;
+            /* float: left; */
+            background-color: rgb(0, 0, 0);
+            position: fixed;
+            border-bottom: 5px solid rgb(135, 13, 1);
+            border-right: 5px solid rgb(195, 39, 43);
+            top: 0;
+            z-index: 9;
+            transition: 0.75s;
+        }
+
+        .nava {
+            margin-left: -30px;
+            transition: 0.75s;
+        }
+
+        .nava li {
+            display: block;
+            font-size: 30px;
+            color: rgb(254, 247, 233);
+            line-height: 100px;
+            float: left;
+            list-style: none;
+            margin-left: 50px;
+        }
+
+        .nava li:hover {
+            color: rgb(135, 13, 1);
+            cursor: pointer;
+        }
+
+
+
+        .header-logo {
+            float: left;
+            width: 320px;
+            height: 70px;
+            /* background-color: aliceblue; */
+            margin-left: 145px;
+            margin-top: 10px;
+            transition: 0.75s;
+        }
+
+        .header-logo img {
+            float: left;
+            /* margin-top: 15px; */
+            height: 80px;
+            /* margin: 30 auto; */
+        }
+
+
+        .navb {
+            margin-right: 30px;
+            transition: 0.75s;
+        }
+
+        .navb li {
+            display: block;
+            font-size: 30px;
+            color: rgb(254, 247, 233);
+            line-height: 100px;
+            float: right;
+            list-style: none;
+
+        }
+
+        .navb li:hover {
+            color: rgb(135, 13, 1);
+            cursor: pointer;
+        }
+
+        .sticky {
+            height: 120px;
+            width: 1900px;
+            /* float: left; */
+            background-color: rgba(0, 0, 0, 0.6);
+            position: fixed;
+            border-bottom: 5px solid rgb(135, 13, 1);
+            top: 0;
+            z-index: 9;
+            transition: 0.75s;
+
+        }
+
+
+        .sticky .nava {
+            margin-left: -30px;
+            margin-top: 10px;
+        }
+
+        .sticky .nava li {
+            display: block;
+            font-size: 30px;
+            color: rgb(254, 247, 233);
+            line-height: 100px;
+            float: left;
+            list-style: none;
+            margin-left: 50px;
+        }
+
+        .sticky .nava li:hover {
+            color: rgb(135, 13, 1);
+            cursor: pointer;
+        }
+
+
+
+        .sticky .header-logo {
+            float: left;
+            width: 320px;
+            height: 70px;
+            /* background-color: aliceblue; */
+            margin-left: 145px;
+            margin-top: 15px;
+        }
+
+        .sticky .header-logo img {
+            float: left;
+            /* margin-top: 15px; */
+            height: 80px;
+            /* margin: 30 auto; */
+        }
+
+        .sticky .navb {
+            margin-right: 30px;
+            margin-top: 10px;
+        }
+
+        .sticky .navb li {
+            display: block;
+            font-size: 30px;
+            color: rgb(254, 247, 233);
+            line-height: 100px;
+            float: right;
+            list-style: none;
+            margin-left: 50px;
+        }
+
+        .sticky .navb li:hover {
+            color: rgb(135, 13, 1);
+            cursor: pointer;
+        }
+
+        .headera {
+            width: 1920px;
+            height: 600px;
+            float: left;
+            background-color: black;
+            background-image: url(../imagesss/bjc.jpg);
+        }
+
+
+        .center {
+            height: 5660px;
+            width: 100%;
+            float: left;
+            background-color: rgb(63, 63, 63);
+        }
+
+        .centera {
+            width: 100%;
+            height: 650px;
+            float: left;
+            background-color: rgb(53, 52, 52);
+        }
+
+        .centera-a {
+            width: 100%;
+            height: 70px;
+            float: left;
+            display: flex;
+            justify-content: center;
+
+
+        }
+
+        .centera-a div {
+            height: 70px;
+            line-height: 70px;
+            font-size: 38px;
+            color: rgb(254, 247, 233);
+            letter-spacing: 5px;
+            margin-top: 20px;
+            /* border: 5px solid rgb(211, 204, 204);
+            padding-left: 20px;
+            padding-right: 20px; */
+        }
+
+        .centera-b {
+            width: 100%;
+            height: 400px;
+            float: left;
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .centera-b-a {
+            width: 360px;
+            height: 440px;
+            float: left;
+            background-color: rgb(9, 103, 109);
+            border-radius: 20px;
+            border: 5px solid rgb(135, 13, 1);
+            margin-left: 100px;
+
+        }
+
+        .centera-b .centera-b-a:nth-child(1) {
+            margin-left: 0px;
+        }
+
+        .centera-top {
+            width: 100%;
+            text-align: center;
+            font-size: 29px;
+            height: 55px;
+            line-height: 55px;
+            color: rgb(254, 247, 233);
+            float: left;
+        }
+
+        .centera-wz {
+            float: left;
+            width: 90%;
+            text-align: left;
+            font-size: 20px;
+            height: 370px;
+            line-height: 28px;
+            color: rgb(254, 247, 233);
+            margin-left: 5%;
+            text-indent: 1em;
+            letter-spacing: 2px;
+
+        }
+
+        .centerb {
+            width: 100%;
+            height: 730px;
+            float: left;
+            /* background-color: antiquergb(254, 247, 233); */
+        }
+
+        .centerb-a {
+            width: 100%;
+            height: 70px;
+            line-height: 70px;
+            font-size: 42px;
+            color: rgb(254, 247, 233);
+            letter-spacing: 5px;
+            margin-top: 35px;
+            text-indent: 2em;
+
+        }
+
+        .centerb-b {
+            width: 500px;
+            height: 342px;
+            float: left;
+            /* background-color: antiquewhite; */
+            margin-left: 195px;
+            margin-top: 30px;
+        }
+
+        .centerb-b img {
+            width: 500px;
+            /* border-radius: 20px;
+            border: 5px solid rgb(135, 13, 1); */
+            border-radius: 20px;
+        }
+
+
+        .centerb-c {
+            margin-left: 30px;
+            width: 800px;
+            height: 332px;
+            float: left;
+            /* background-color: rgb(192, 120, 26); */
+            margin-top: 30px;
+
+
+            /* background-color: rgb(9, 103, 109); */
+            border-radius: 20px;
+
+        }
+
+        .centerb-c img {
+            border-radius: 20px;
+        }
+
+        .centerb-e {
+            position: absolute;
+            width: 350px;
+            height: 640px;
+            float: left;
+            background-color: antiquewhite;
+            margin-left: 1460px;
+            margin-top: -60px;
+            border-radius: 20px;
+            background-image: url(../imagesss/ddddd.jpg);
+        }
+
+        /* .centerb-e img {
+            border-radius: 20px;
+            border: 5px solid rgb(135, 13, 1);
+        } */
+
+        .kka {
+            width: 97%;
+            margin-left: 1.5%;
+            margin-top: 15px;
+        }
+
+        .centerb-d {
+
+            width: 1330px;
+            height: 150px;
+            float: left;
+            /* background-color: rgb(192, 120, 26); */
+            margin-top: 30px;
+            text-align: left;
+            text-indent: 2em;
+            font-size: 20px;
+            letter-spacing: 3px;
+            margin-left: 80px;
+            color: rgb(254, 247, 233);
+            background-color: rgb(9, 103, 109);
+            border-radius: 20px;
+            border: 5px solid rgb(135, 13, 1);
+        }
+
+        .centerb-d span {
+            color: rgb(7, 7, 7);
+
+            font-size: 22px;
+        }
+
+
+        .centerc {
+            width: 100%;
+            height: 930px;
+            float: left;
+            background-color: rgb(53, 52, 52);
+        }
+
+
+        .centerc-a {
+            width: 466px;
+            height: 700px;
+            float: left;
+            background-color: antiquewhite;
+            margin-left: 115px;
+            margin-top: 70px;
+        }
+
+        .centerc-b {
+            width: 700px;
+            height: 220px;
+            float: left;
+            background-color: antiquewhite;
+            margin-left: 50px;
+            margin-top: 70px;
+        }
+
+        .centerc-c {
+            width: 460px;
+            height: 60px;
+            float: left;
+            background-color: rgb(9, 103, 109);
+            margin-left: 20px;
+            margin-top: 70px;
+            font-size: 34px;
+            color: white;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        .centerc-c span {
+            margin-left: 25px;
+        }
+
+        .centerc-c span:nth-child(1) {
+            margin-left: 0px;
+        }
+
+        .centerc-c span:hover {
+            color: rgb(135, 13, 1);
+            cursor: pointer;
+        }
+
+
+
+        .centerc-d {
+            width: 700px;
+            height: 460px;
+            float: left;
+            background-color: antiquewhite;
+            margin-left: 50px;
+            margin-top: 20px;
+        }
+
+        .centerc-e {
+            width: 460px;
+            height: 620px;
+            float: left;
+            background-color: antiquewhite;
+            margin-left: 20px;
+            margin-top: -140px;
+        }
+
+        .centerc-e img {
+            width: 460px;
+            height: 620px;
+        }
+
+
+
+        .centerc-f {
+            width: 100%;
+            height: 54px;
+            float: left;
+            /* background-color: antiquewhite; */
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .centerc-f img:hover {
+            cursor: pointer;
+        }
+
+        .centerd {
+            width: 100%;
+            height: 1050px;
+            float: left;
+            background-color: rgb(63, 63, 63);
+        }
+
+
+
+        .centere {
+            width: 100%;
+            height: 2300px;
+            float: left;
+            background-color: rgb(53, 52, 52);
+        }
+
+        .centere-a {
+            width: 1560px;
+            height: 2150px;
+            float: left;
+            /* background-color: antiquewhite; */
+            margin-top: 40px;
+            margin-left: 185px;
+        }
+
+        /* pbk父盒子 pbl子盒子 */
+        .pbk {
+            width: 1560px;
+            float: left;
+            display: flex;
+            /* 弹性布局 */
+            justify-content: center;
+            /* 子元素居中显示 */
+            background-color: rgb(53, 52, 52);
+            margin: 0 auto;
+        }
+
+        .pbl {
+            max-width: 1560px;
+            column-count: 4;
+            /* 列数 */
+            column-gap: 19px;
+            /* 列间距 */
+            overflow: hidden;
+        }
+
+        .image {
+            margin-bottom: 10px;
+            overflow: hidden;
+            width: 304px;
+            transition: 1s;
+            /* border: 0px solid black; */
+            /* overflow: hidden; */
+
+        }
+
+
+
+        .image img {
+            width: 296px;
+            transition: 1s;
+            float: left;
+            border: 4px solid rgb(170, 170, 170);
+        }
+
+        .image img:hover {
+            transform: scale(1.2);
+            transition: 1s;
+
+        }
+
+
+
+        /* .image:hover .pbl-nr {
+            margin-top: -70px;
+            transition: 4s;
+        } */
+
+        @media (max-width:1200px) {
+            .pbl {
+                column-count: 4;
+            }
+        }
+
+        @media (max-width:850px) {
+            .pbl {
+                column-count: 3;
+            }
+        }
+
+        @media (max-width:600px) {
+            .plb {
+                column-count: 2;
+            }
+        }
+
+        .pbl-nr {
+            width: 100%;
+            height: 40px;
+            /* float: left; */
+            background-color: rgb(26, 25, 25);
+            margin-top: -44px;
+            position: relative;
+            font-size: 16px;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            line-height: 40px;
+        }
+
+        .footer {
+            border-top: 5px solid rgb(135, 13, 1);
+            width: 100%;
+            height: 300px;
+            float: left;
+            background-color: black;
+        }
+
+
+        .footera {
+            width: 1400px;
+            height: 60px;
+            float: left;
+            /* background-color: black; */
+            margin-left: 270px;
+            color: rgb(254, 247, 233);
+            line-height: 60px;
+            text-align: center;
+            font-size: 20px;
+
+        }
+
+        .footera:hover {
+            color: rgb(135, 13, 1);
+            cursor: pointer;
+        }
+
+        .footer-logo {
+            position: absolute;
+            height: 42px;
+            width: 34px;
+            margin-left: 125px;
+            margin-top: 4px;
+        }
+
+        .footer-logoa {
+            position: absolute;
+            height: 20px;
+            width: 18px;
+            margin-left: 1530px;
+            margin-top: 220px;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-top"></div>
+    <div class="header">
+        <ul class="nava">
+            <li>
+                <a href="../html/culture.html">古典文化</a>
+            </li>
+            <li>
+                <a href="../html/news.html">新闻中心</a>
+            </li>
+            <li>
+                <a href="../html/Movies.html">现代影视</a>
+            </li>
+            <li><a href="../html/national.html">国潮当立</a></li>
+
+        </ul>
+        <div class="header-logo"><img src="../image/logoa.png" alt=""></div>
+        <ul class="navb">
+            <li><a href="../html/homepage.html">首页</a></li>
+
+        </ul>
+    </div>
+    <div class="headera">
+
+    </div>
+    <div class="center">
+        <div class="centera">
+            <div class="centera-a">
+                <div>何谓国潮——始于文化 忠于原创</div>
+            </div>
+            <div class="centera-b">
+                <div class="centera-b-a">
+                    <div class="centera-top">文化</div>
+                    <div class="centera-wz">
+                        每一种文化都有精华,也有糟粕,文华的传承就需要取其精华,去其糟粕。<br>&nbsp;&nbsp;
+                        国潮中的中国文化,在五千年传统文化的基础上,糅合现代审美,给传统文化赋能,传承文化的同时以符合现代审美的方式展现出来。
+                        <br>&nbsp;&nbsp;&nbsp同时,国潮中的中国文化元素，并不仅仅只是直接的视觉IP冲击，还包括细节的中国图腾的点缀，文字的润色。用传统的中国文化“语言”,席卷喧嚣,传统不再传统,而是繁华。
+                    </div>
+                </div>
+                <div class="centera-b-a">
+                    <div class="centera-top">品牌</div>
+                    <div class="centera-wz">
+                        广义的“品牌”是具有经济价值的无形资产，用抽象化的、特有的、能识别的心智概念来表现其差异性，从而在人们意识当中占据一定位置的综合反映。
+                        <br>&nbsp;&nbsp;品牌是“国潮”的载体,“国潮”在市场空间的流动，需要品牌作为载体，这些品牌可以是具有历史沉淀和民众认知的民族品牌，也可以是致力成为具有中国民族特色的品牌。
+                        <br>&nbsp;&nbsp;有了品牌作为载体,国潮才算得上真正的国潮！
+                    </div>
+                </div>
+                <div class="centera-b-a">
+                    <div class="centera-top">新势力</div>
+                    <div class="centera-wz">
+                        “国潮”的诞生，得力于“Z世代”的消费追求。
+                        <br>&nbsp;&nbsp;Z世代并不盲目崇拜外国品牌，他们不追求品牌带来的身份，而是更追求个性和自由。
+                        <br>&nbsp;&nbsp;他们摆脱了传统的束缚，喜欢尝试新品、未知；
+                        他们赋予生活新乐趣和新玩法，追求精神愉悦和满足，并能以追求个性为代名词。
+                        <br>&nbsp;&nbsp;“Z世代”推动了国货的发展，他们是“国潮”中的后浪，也是国货生态中的源头活水。
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="centerb">
+            <div class="centerb-a">清华文创院执行院长胡钰:国潮发展关乎经济增长，更关乎文化自信</div>
+            <div class="centerb-b"><img src="../imagesss/hj.jpg" alt=""></div>
+            <div class="centerb-c">
+                <img src="../imagesss/yja.jpg" alt="">
+                <img src="../imagesss/yjb.jpg" alt="" style="margin-left: 20px;">
+            </div>
+            <div class="centerb-d">
+                <div class="kka">
+                    国潮文创未来<span>怎样做的更好</span>，胡钰表示，放眼国潮<span>未来</span>，更活跃的<span>创意</span>、更深厚的<span>传统</span>、更广阔的<span>视野</span>、更前沿的<span>技术</span>、更稳定的<span>品质</span>、更积极的<span>传播</span>都是不可缺少的重要内容。
+
+
+                    <br>&nbsp;&nbsp;&nbsp;胡钰认为国潮应向世界<span>传播中华人文精</span>，正如泰戈尔于1924年在清华大学演讲时所说：“人类的文明是正等着一个伟大的圆满，等着他的灵魂的纯美的表现。这是你们的责任，你们应得在这个方向里尽你们的贡献。”
+                </div>
+            </div>
+            <div class="centerb-e">
+                <!-- <img src="../imagesss/yjc.jpg" alt=""> -->
+            </div>
+        </div>
+        <div class="centerc">
+            <div class="centerc-a">
+                <div class="lb-box" id="lb-1">
+                    <!-- 轮播内容 -->
+                    <div class="lb-content">
+                        <div class="lb-item active">
+                            <a href="#">
+                                <img src="../imagesss/lbad.jpg" alt="picture loss">
+
+                            </a>
+                        </div>
+                        <div class="lb-item">
+                            <a href="#">
+                                <img src="../imagesss/lbae.jpg" alt="picture loss">
+
+                            </a>
+                        </div>
+                        <div class="lb-item">
+                            <a href="#">
+                                <img src="../imagesss/lbac.jpg" alt="picture loss">
+
+                            </a>
+                        </div>
+                        <div class="lb-item">
+                            <a href="#">
+                                <img src="../imagesss/lba.jpg" alt="picture loss">
+
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 轮播标志 -->
+                    <ol class="lb-sign">
+                        <li class="active">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                    </ol>
+                    <!-- 轮播控件 -->
+                    <div class="lb-ctrl left">＜</div>
+                    <div class="lb-ctrl right">＞</div>
+                </div>
+            </div>
+            <div class="centerc-b">
+                <img src="../imagesss/topaaa.jpg" alt="">
+            </div>
+            <div class="centerc-c">
+                <span>文创</span>
+                <span>美妆</span>
+                <span>服饰</span>
+                <span>影视</span>
+            </div>
+            <div class="centerc-d">
+                <img src="../imagesss/d3.jpg" alt="">
+            </div>
+            <div class="centerc-e"><img src="../imagesss/bjaa.gif" alt=""></div>
+            <div class="centerc-f"><img src="../imagesss/ck.png" alt=""></div>
+        </div>
+        <div class="centerd">
+            <div class="centera-a" style="margin-top: 30px;">
+                <div>国潮资讯</div>
+            </div>
+            <div id="zSlider">
+                <div class="bzn">
+                    <div id="picshow">
+                        <div id="picshow_img">
+                            <ul>
+                                <li><a href="#"><video src="../mp4/4.mp4" width="1174" height="660"
+                                            controls="controls"></video></a></li>
+                                <li><a href="#"><video src="../mp4/gc2.mp4" width="1174" height="660"
+                                            controls="controls"></video></a></li>
+                                <li><a href="#"><video src="../mp4/gc3.mp4" width="1174" height="660"
+                                            controls="controls"></video></a></li>
+                                <li><a href="#"><video src="../mp4/gc4.mp4" width="1174" height="660"
+                                            controls="controls"></video></a></li>
+                                <li><a href="#"><video src="../mp4/gc5.mp4" width="1174" height="660"
+                                            controls="controls"></video></a></li>
+                                <li><a href="#"><video src="../mp4/xz4.mp4" width="1174" height="660"
+                                            controls="controls"></video></a></li>
+                            </ul>
+                        </div>
+                        <div id="picshow_tx">
+                            <ul>
+                                <li>
+                                    <h3><a href="#">[台上人唱着 心碎离别歌]</a></h3>
+                                    <p>原创戏曲MV 21.5万播放·总弹幕数256 2019-11-28 17:35:34</p>
+                                </li>
+                                <li>
+                                    <h3><a href="#">[SING女团]《国潮时代》MV</a></h3>
+                                    <p>右键国潮馆主题曲 23万播放·总弹幕数756 2019-05-14 23:30:04</p>
+                                </li>
+                                <li>
+                                    <h3><a href="#">成都大运会国潮风宣传片!</a></h3>
+                                    <p>每一帧都是混搭,根本不够看 25.2万播放·总弹幕数256 2021-09-26 22:42:18</p>
+                                </li>
+                                <li>
+                                    <h3><a href="#">【朱炳仁·铜】</a></h3>
+                                    <p>国潮非遗铜文创合辑 154万播放·总弹幕数3085 2021-09-30 12:00:00</p>
+                                </li>
+                                <li>
+                                    <h3><a href="#">故宫文创</a></h3>
+                                    <p>故宫好货上新啦 15万播放·总弹幕数855 2021-12-23 13:47:41</p>
+                                </li>
+                                <li>
+                                    <h3><a href="#">剑开天门</a></h3>
+                                    <p>李淳罡重回剑仙一剑开天门 1200万播放·总弹幕数960 2022-01-10 20:23:52</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="select_btn">
+                    <div class="jc">国潮当立</div>
+                    <div class="bg">
+                        <ul>
+                            <li><a href="#"><img src="../imagesss/sp1.png"><span class="select_text">[台上人唱着
+                                        心碎离别歌]</span><span class="select_date">原创戏曲MV</span>
+                                    <span class="select_date" style="margin-top: -5px;">21.5万播放·256弹幕</span></a></li>
+                            <li><a href="#"><img src="../imagesss/sp2.png">
+                                    <span class="select_text">[SING女团]《国潮时代》MV</span>
+                                    <span class="select_date">有间国潮馆主题曲</span>
+                                    <span class="select_date" style="margin-top: -5px;">23万播放·756弹幕</span>
+                                </a></li>
+                            <li><a href="#"><img src="../imagesss/sp3.png">
+                                    <span class="select_text">成都大运会国潮风宣传片!</span>
+                                    <span class="select_date">每一帧都是混搭,根本不够看</span>
+                                    <span class="select_date" style="margin-top: -5px;">25.2万播放·385弹幕</span>
+                                </a></li>
+                            <li><a href="#"><img src="../imagesss/sp4.png">
+                                    <span class="select_text">【朱炳仁·铜】</span>
+                                    <span class="select_date">国潮非遗铜文创合辑</span>
+                                    <span class="select_date" style="margin-top: -5px;">154万播放·3850弹幕</span>
+                                </a></li>
+                            <li><a href="#"><img src="../imagesss/sp5.png">
+                                    <span class="select_text">故宫文创</span>
+                                    <span class="select_date">故宫好货上新啦!</span>
+                                    <span class="select_date" style="margin-top: -5px;">15万播放·850弹幕</span>
+                                </a></li>
+                            <li><a href="#"><img src="../imagesss/sp6.png"><span class="select_text">剑开天门</span><span
+                                        class="select_date">李淳罡重回剑仙一剑开天门</span>
+                                    <span class="select_date" style="margin-top: -5px;">1200万播放·9600弹幕</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="dibu"><img src="../imagesss/dbc.jpg" alt=""
+                            style="width:400px;height: 200px;margin-top: 2px;"></div>
+                </div>
+            </div>
+            <div class="centerc-f" style="margin-top: 60px;"><img src="../imagesss/ck.png" alt=""></div>
+        </div>
+        <div class="centere">
+            <div class="centera-a" style="margin-top: 30px;">
+                <div>国潮影集</div>
+            </div>
+            <div class="centere-a">
+                <div class="pbk">
+                    <div class="pbl">
+                        <div class="image"><img src="../imagesss/4.jpg">
+                        </div>
+                        <div class="image"><img src="../imagesss/41.jpg">
+                        </div>
+                        <div class="image"><img src="../imagesss/42.jpg">
+                        </div>
+                        <div class="image"><img src="../imagesss/48.jpg"></div>
+                        <div class="image"><img src="../imagesss/35.jpg"></div>
+                        <div class="image"><img src="../imagesss/3.jpg"></div>
+                        <div class="image"><img src="../imagesss/28.jpg"></div>
+                        <div class="image"><img src="../imagesss/46.jpg"></div>
+                        <div class="image"><img src="../imagesss/47.jpg">
+                        </div>
+                        <div class="image"><img src="../imagesss/27.jpg"></div>
+                        <div class="image"><img src="../imagesss/8.jpg"></div>
+                        <div class="image"><img src="../imagesss/9.jpg"></div>
+                        <div class="image"><img src="../imagesss/29.jpg"></div>
+                        <div class="image"><img src="../imagesss/11.jpg"></div>
+                        <div class="image"><img src="../imagesss/1.jpg"></div>
+                        <div class="image"><img src="../imagesss/40.jpg"></div>
+                        <div class="image"><img src="../imagesss/33.jpg"></div>
+                        <div class="image"><img src="../imagesss/15.jpg"></div>
+                        <div class="image"><img src="../imagesss/38.jpg"></div>
+                        <div class="image"><img src="../imagesss/33.jpg"></div>
+                    </div>
+                </div>
+                <div class="centerc-f" style="margin-top: 60px;"><img src="../imagesss/ck.png" alt=""></div>
+
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footera" style="margin-top: 32px;">新华社主办 版权所有：新华网股份有限公司 Copyright © 2000- 2021 XINHUANET.com All
+            Rights Reserved</div>
+        <div class="footera">本站所刊登的新华社及新华网各种新闻﹑信息和各种专题专栏资料，均为新华网版权所有，未经协议授权禁止下载使用</div>
+        <div class="footera">新华社简介 | 公司官网 | 联系我们 | 我要链接 | 版权声明 | 法律顾问 | 广告服务 | 技术服务中心 | 新华云 | 违法和不良信息举报电话:19914864524
+        </div>
+        <div class="footera">
+            <div class="footer-logo"><img src="../images/foot-ga.png" alt=""></div>
+            京公网安备：11000002000015号 | 网上传播视听节目许可证(0103020) | 中国互联网视听节目服务自律公约 | 可信网站认证
+        </div>
+        <div class="footer-logoa"><img src="../images/foo-gb.png" alt=""></div>
+    </div>
+</body>
+<script type="text/javascript">
+    window.addEventListener("scroll", function () {
+        // var header = document.querySelector("header");
+        var header = document.querySelector(".header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    })
+</script>
+
+</html>
